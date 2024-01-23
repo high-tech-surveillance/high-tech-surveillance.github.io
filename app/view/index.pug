@@ -1,0 +1,10 @@
+doctype html
+html
+  include partial/head
+  body
+    include partial/header
+    include presentation
+    include about-us
+
+  if !isProduction
+    script(src=require('./hmr.js'))
