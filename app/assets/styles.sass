@@ -1,5 +1,12 @@
 html
+  font-family: Source Sans Pro,  Assistant
   font-size:14px
+
+.heading-fonttype
+  font-family: Soruce Sans Pro
+
+.menu-fonttype
+  font-family: Assistant
 
 header 
   display: flex
@@ -21,19 +28,21 @@ header
       margin-left: 1em
       margin-right: 1em
           
-//@media screen and (max-width: 600px)
-  //header
-    //.navigation-menu
-      //.toggle-menu
-        //display: none
-
-@media screen and (max-device-width: 720px)
-  html
-    font-size:22px
+@media screen and (max-device-width: 720px), (max-width: 720px)
   header
     .navigation-menu
       *
         &:not(:first-child)
           display: none
-      button.toggle-menu
-        display: block
+      .toggle-menu
+        display: inline-block
+
+@media screen and (min-device-width: 720px)
+  html
+    font-size:22px
+  header
+    .navigation-menu
+      *
+        display: inline-block
+      .toggle-menu-button
+        display: none
