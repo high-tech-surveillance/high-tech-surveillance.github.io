@@ -1,24 +1,32 @@
 const path = require("path");
-const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
 const PugPlugin = require("pug-plugin");
 
 const isProduction = process.env.NODE_ENV == "production";
+const OUTPUT_DIR = "dist";
 
-const stylesHandler = "style-loader";
 const sourcePath = path.join(__dirname, "app/view/"); // => /path/to/src
 
 const config = {
   target: "web",
-  entry: {},
+  entry: {
+    index: "./app/view/index.pug",
+    "about-us": "./app/view/about-us.pug",
+  },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, OUTPUT_DIR),
+    filename: "[name].[contenthash:8][ext]",
+  },
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, "app/assets/"),
+    },
   },
   devServer: {
     open: true,
     host: "localhost",
     liveReload: true,
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, OUTPUT_DIR),
     },
     watchFiles: {
       paths: ["app/**/*.*"],
@@ -29,32 +37,8 @@ const config = {
   },
   plugins: [
     new PugPlugin({
-      //filename: (pathData) => {
-      //const sourceFile = pathData.filename; // => /path/to/src/pages/about.pug
-      //console.log("Parsing", sourceFile);
-      //const relativeFile = path.relative(sourcePath, sourceFile); // => pages/about.pug
-      //const { dir, name } = path.parse(relativeFile); // dir: 'pages', name: 'about'
-      //return `${dir}/${name}.html`; // => dist/pages/about.html
-      //},
       verbose: true,
       pretty: true,
-      //postprocess: (content, info, compilation) => {
-      //console.log(info);
-      //console.log("Compilation", compilation);
-      //console.log("Content", content);
-      ////return eval(content);
-      ////return content;
-      //},
-    }),
-    new HtmlBundlerPlugin({
-      // When this test is enable, the pug files in the directory are parsed, but they are converted as JS modules.
-      //test: /\.(pug|html)$/,
-      // The entry point doesn't process pug files unless they are individualy specified or tested
-      //entry: "app/view/",
-      entry: {
-        index: "app/view/index.pug",
-        "about-us": "app/view/about-us.pug",
-      },
     }),
 
     // Add your plugins here
@@ -68,13 +52,14 @@ const config = {
         options: {
           method: "render",
           data: {
+            // Pass isProduction variable to inject HRM code when is on development
             isProduction,
           },
         },
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "css-loader", "sass-loader"],
+        use: ["css-loader", "sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
