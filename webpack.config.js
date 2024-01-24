@@ -39,6 +39,12 @@ const config = {
     new PugPlugin({
       verbose: true,
       pretty: true,
+      js: {
+        filename: "[name].[contenthash:8].js",
+      },
+      css: {
+        filename: "[name].[contenthash:8].css",
+      },
     }),
 
     // Add your plugins here
