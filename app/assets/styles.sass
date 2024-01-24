@@ -1,4 +1,39 @@
-body
-  font: 100%
-.logo
-  width:250px
+html
+  font-size:14px
+
+header 
+  display: flex
+  justify-content: space-around
+  align-items: center
+  .business-presentation
+    display:  flex
+    align-items: center
+    .logo
+      margin:0.5rem
+      width:5rem
+  .navigation-menu
+    display: inline-flex
+    list-style-type: none
+    button.toggle-menu
+      background: none
+      border: none
+    *
+      margin-left: 1em
+      margin-right: 1em
+          
+//@media screen and (max-width: 600px)
+  //header
+    //.navigation-menu
+      //.toggle-menu
+        //display: none
+
+@media screen and (max-device-width: 720px)
+  html
+    font-size:22px
+  header
+    .navigation-menu
+      *
+        &:not(:first-child)
+          display: none
+      button.toggle-menu
+        display: block
