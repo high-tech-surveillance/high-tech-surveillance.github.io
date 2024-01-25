@@ -1,13 +1,14 @@
 header
-  div.business-presentation
-    img.logo(src=require("assets/img/logo.svg"))
-    h1.heading-fonttype High Tech Surveillance
-  nav.navigation-menu.menu-fonttype#navigation-menu
-      i Home
-      a(href="about-us.html") About us
-      a Gallery
-      i Quote
-      i Contact us
-      a.toggle-menu-button(onclick="document.toggleMenu()")
-        img(src=require("assets/img/bars.svg"))
-hr
+  div.wrapper
+    span.business-presentation
+      img.logo(src=require("assets/img/logo.svg"))
+      span.heading-text High Tech Surveillance
+    nav.navigation-menu.menu-text#navigation-menu
+        a(href="/") Home
+        a(href="about-us.html") About us
+        a Gallery
+        a Quote
+        a Contact us
+        a.toggle-menu-button(onclick="toggleMenu()")
+          img(src=require("assets/img/bars.svg"))
+  hr

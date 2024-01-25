@@ -1,0 +1,10 @@
+mixin webpage
+  doctype html
+  html
+    include partial/head
+    body
+      include partial/header
+      block
+
+    if !isProduction
+      script(src=require('./hmr.js'))
