@@ -1,6 +1,6 @@
 html
-  font-family: Source Sans Pro,  Assistant
-  font-size:14px
+  font-family: 'Source Sans Pro',  'Assistant'
+  font-size:22px
 
 .heading-fonttype
   font-family: Soruce Sans Pro
@@ -11,32 +11,47 @@ html
 header 
   display: flex
   justify-content: space-around
-  align-items: center
+  align-items: flex-start
   .business-presentation
     display:  flex
-    align-items: center
+    align-items: flex-start
     .logo
       margin:0.5rem
       width:5rem
   .navigation-menu
     display: inline-flex
     list-style-type: none
-    button.toggle-menu
-      background: none
-      border: none
-    *
-      margin-left: 1em
-      margin-right: 1em
-          
+    .toggle-menu-button::hover
+      cursor: pointer
+    > *
+      margin-left: 0.5em
+      margin-right: 0.5em
+
+// Mobile device specific
 @media screen and (max-device-width: 720px), (max-width: 720px)
   header
     .navigation-menu
+      position: relative
+      margin-top: 2em
       *
         &:not(:first-child)
           display: none
-      .toggle-menu
+      &.toggle-active
+        display: flex
+        flex-direction: column
+        .toggle-menu-button
+          position: absolute
+          right: 0
+          top: 0
+        > *
+          display: inline-block
+      .toggle-menu-button
         display: inline-block
+        cursor: pointer
+        > *
+          height: 1em
 
+// Desktop specific style
 @media screen and (min-device-width: 720px)
   html
     font-size:22px
