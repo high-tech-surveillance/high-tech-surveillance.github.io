@@ -1,15 +1,26 @@
+$red-colour: #a50d0d
+$source-sans-font:  'Sans-serif'
+$assistant-font: 'Assistant'
+
+// Web safe fonts
+// Arial, Verdana, Tahoma, Times New Roman, Georgia, Garamond
+
 html
-  font-family: 'Source Sans Pro',  'Assistant'
+  font-family: $source-sans-font,  $assistant-font
   font-size:12px
+  body
+    margin: 0
 
 .heading-text
-  font-family: 'Source Sans Pro'
+  font-family: $source-sans-font
   font-size: 2rem
   font-weight: bold
+  text-transform: uppercase
 
 .menu-text
-  font-family: 'Assistant'
+  font-family: $assistant-font
   font-size: 1.5rem
+  text-transform: uppercase
 
 header 
   .wrapper
