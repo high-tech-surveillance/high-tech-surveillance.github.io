@@ -1,0 +1,1 @@
+window.toggleMenu=function(){console.log("toggleMenu");let e=document.getElementById("navigation-menu");e.classList.contains("toggle-active")?e.classList.remove("toggle-active"):e.classList.add("toggle-active")};
