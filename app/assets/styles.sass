@@ -19,8 +19,10 @@ header
     .business-presentation
       display:  flex
       align-items: center
+      .heading-text
+        margin-top: 0.5em
       .logo
-        margin:0.5rem
+        margin:1rem
         width:5rem
     .navigation-menu
       display: inline-flex
@@ -32,6 +34,10 @@ header
       > *
         margin-left: 0.7083em
         margin-right: 0.7083em
+  hr
+    height: 10px
+    border: none
+    background-color: $red-colour
 
 // Mobile device specific
 @media screen and (max-device-width: 720px), (max-width: 720px)
