@@ -1,8 +1,9 @@
+- const business = require("/app/business-card.json")
 header
   div.wrapper
     span.business-presentation
       img.logo(src=require("assets/img/logo.svg"))
-      span.heading-text High Tech Surveillance
+      span.heading-text= business.name
     nav.navigation-menu.menu-text#navigation-menu
         a(href="/") Home
         a(href="about-us.html") About us

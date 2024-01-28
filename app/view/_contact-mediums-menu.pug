@@ -1,11 +1,9 @@
+- const businessCard = require("/app/business-card.json")
+
+mixin contact-link(medium, address)
+  a(href=address)
+    img(src=require('assets/img/contact-mediums/icon-' + medium + '.svg'))
+
 nav.contact-mediums
-  a(href="phone://")
-    img(src=require('assets/img/contact-mediums/icon-mobilephone.svg'))
-  a(href="whatsapp://")
-    img(src=require('assets/img/contact-mediums/icon-whatsapp.svg'))
-  a(href="https://www.facebook.com/")
-    img(src=require('assets/img/contact-mediums/icon-facebook.svg'))
-  a(href="https://www.tiktok.com/")
-    img(src=require('assets/img/contact-mediums/icon-tiktok.svg'))
-  a(href="https://www.youtube.com")
-    img(src=require('assets/img/contact-mediums/icon-youtube.svg'))
+  each address, channel in businessCard['contact-mediums']
+    +contact-link(channel, address)
