@@ -1,5 +1,7 @@
 $red-colour: #a50d0d
-$source-sans-font:  'Sans-serif'
+$hilight-red: #c11717
+$hilight-blue: #1153a7
+$source-sans-font:  'Source Sans Pro'
 $assistant-font: 'Assistant'
 
 // Web safe fonts
@@ -15,13 +17,40 @@ $assistant-font: 'Assistant'
     &:not(:last-child)
       margin-right: 5px
 
-.editorial-bullet
+.editorial-cover
+  text-transform: uppercase
+  text-align: center
   img
     float: left
+  p
+    margin: 0
+    font-weight: bold
+    &.first-line
+      font-size: 7.0833rem
+      line-height: 1em
+      //text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2)
+    &.second-line
+      font-size: 2.9166rem
+      letter-spacing: 0.5rem
+  div.editorial-bullet
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2)
+    padding: 0 3em 0 3em
+    display: inline-block
+  //hr
+    //background-color: rgba(177, 178, 181, 0.59375)
+    //height: 6px
+    //border: none
+    //margin-left: 2rem
 
+.hilight-red
+  color: $hilight-red
+
+.hilight-blue
+  color: $hilight-blue
 html
-  font-family: $source-sans-font,  $assistant-font
+  font-family: $source-sans-font,  $assistant-font, 'sans'
   font-size:12px
+  color: black
   body
     margin: 0
 
@@ -35,6 +64,9 @@ html
   font-family: $assistant-font
   font-size: 1.5rem
   text-transform: uppercase
+  a
+    text-decoration: none
+    color: black
 
 header 
   .wrapper
