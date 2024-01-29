@@ -18,8 +18,10 @@ $assistant-font: 'Assistant'
       margin-right: 5px
 
 .editorial-cover
+  max-height: 86vh
   text-transform: uppercase
-  text-align: center
+  display: flex
+  justify-content: center
   img
     float: left
   p
@@ -30,13 +32,19 @@ $assistant-font: 'Assistant'
       line-height: 1em
       text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2)
     &.second-line
-      font-size: 2.9166rem
+      font-size: 2.166rem
       letter-spacing: 0.5rem
   div.editorial-bullet
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2)
     padding: 0 3em 0 3em
-    display: inline-block
-  //hr
+    display: inline-flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  hr
+    border-width: 3px
+    border-style: solid
+    border-color: #b1b2b5
+    width: 100%
     //background-color: rgba(177, 178, 181, 0.59375)
     //height: 6px
     //border: none
