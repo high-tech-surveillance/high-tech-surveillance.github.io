@@ -1,12 +1,19 @@
 $red-colour: #a50d0d
 $hilight-red: #c11717
 $hilight-blue: #1153a7
+$background-blue: #1153a7
 $source-sans-font:  'Source Sans Pro'
-$assistant-font: 'Assistant'
+$font-assistant: 'Assistant'
 
 // Web safe fonts
 // Arial, Verdana, Tahoma, Times New Roman, Georgia, Garamond
-
+.title-case
+  text-transform: lowercase
+  &:first-letter
+    text-transform: uppercase
+.font-assistant-35
+  font-family: $font-assistant
+  font-size: 2.916rem
 .contact-mediums
   svg
     fill: $red-colour
@@ -17,6 +24,20 @@ $assistant-font: 'Assistant'
     &:not(:last-child)
       margin-right: 5px
 
+.hilight-darkred
+  color: $red-colour
+
+.blue-button
+  font-family: $font-assistant
+  font-size: 2rem
+  font-weight: 700
+  color: white
+  background-color: $background-blue
+  border-radius: 15px
+  padding: 0.75rem 1.5rem  0.75rem 1.5rem
+  box-shadow: 7px 7px 5px 2px rgba(0, 0, 0, 0.3)
+
+
 .editorial-cover
   max-height: 86vh
   text-transform: uppercase
@@ -26,7 +47,6 @@ $assistant-font: 'Assistant'
     float: left
   p
     margin: 0
-    font-weight: bold
     &.first-line
       font-size: 7.0833rem
       line-height: 1em
@@ -56,7 +76,7 @@ $assistant-font: 'Assistant'
 .hilight-blue
   color: $hilight-blue
 html
-  font-family: $source-sans-font,  $assistant-font, 'sans'
+  font-family: $source-sans-font,  $font-assistant, 'sans'
   font-size:12px
   color: black
   body
@@ -69,7 +89,7 @@ html
   text-transform: uppercase
 
 .menu-text
-  font-family: $assistant-font
+  font-family: $font-assistant
   font-size: 1.5rem
   text-transform: uppercase
   a
