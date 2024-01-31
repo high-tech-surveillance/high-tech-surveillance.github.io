@@ -32,6 +32,7 @@
   padding: 0.75em 1.5em  0.75em 1.5em
   box-shadow: 7px 7px 5px 2px rgba(0, 0, 0, 0.3)
   margin-top: 2em
+  display: inline-block
 
 
 .editorial-cover
@@ -39,10 +40,13 @@
   text-transform: uppercase
   display: flex
   justify-content: center
+  align-items: center
+  overflow: hidden
   img
-    float: left
+    align-self: flex-start
   p
     margin: 0
+    line-height: 1em
     &.first-line
       text-align: center
       font-size: 7.0833rem
@@ -53,10 +57,7 @@
       letter-spacing: 0.5rem
   div.editorial-bullet
     padding: 0 3em 0 3em
-    display: inline-flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    text-align: center
   hr
     border-width: 3px
     border-style: solid
