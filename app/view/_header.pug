@@ -1,15 +1,16 @@
 - const business = require("/app/business-card.json")
+
+mixin menu-entry(title, link)
+  a(href=" =link")= title
+
 header
   div.wrapper
     span.business-presentation
       img.logo(src=require("assets/img/logo.svg"))
       span.heading-text= business.name
     nav.navigation-menu.menu-text#navigation-menu
-        a(href="/") Home
-        a(href="about-us.html") About us
-        a Gallery
-        a Quote
-        a Contact us
-        a.toggle-menu-button(onclick="toggleMenu()")
-          img(src=require("assets/img/bars.svg"))
+      each menuitem of ([['Home', "/"],['About us', '/about-us.html'], ['Gallery', ''], ['Quote', ''], ['Contact us', '']])
+        +menu-entry(menuitem[0], menuitem[1])
+      a.toggle-menu-button(onclick="toggleMenu()")
+        img(src=require("assets/img/bars.svg"))
   hr

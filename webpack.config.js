@@ -19,6 +19,11 @@ const config = {
   resolve: {
     alias: {
       assets: path.resolve(__dirname, "app/assets/"),
+      style: path.resolve(__dirname, "app/style/"),
+      theme: path.resolve(
+        __dirname,
+        "app/style/high-tech-surveillance/_index.sass"
+      ),
     },
   },
   devServer: {
