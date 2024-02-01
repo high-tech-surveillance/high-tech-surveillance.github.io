@@ -1,7 +1,7 @@
 - const business = require("/app/business-card.json")
 
 mixin menu-entry(title, link)
-  a(href=" =link")= title
+  a(href=`${link}`)= title
 
 header
   div.wrapper
