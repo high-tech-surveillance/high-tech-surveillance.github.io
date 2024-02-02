@@ -1,5 +1,6 @@
 @use "globals" as *
 @use "page-about-us"
+@use "media-mobile"
 
 // Web safe fonts
 // Arial, Verdana, Tahoma, Times New Roman, Georgia, Garamond
@@ -36,7 +37,6 @@
   display: inline-block
   &:hover
     cursor: pointer
-
 
 .editorial-cover
   max-height: 86vh
@@ -121,27 +121,4 @@ header
     border: none
     background-color: $red-colour
     margin: 0
-
-// Mobile device specific
-@media screen and (max-device-width: 720px), (max-width: 720px)
-  header
-    .navigation-menu
-      position: relative
-      *
-        &:not(:first-child)
-          display: none
-      &.toggle-active
-        display: flex
-        flex-direction: column
-        .toggle-menu-button
-          position: absolute
-          right: 0
-          top: 0
-        > *
-          display: inline-block
-      .toggle-menu-button
-        display: inline-block
-        cursor: pointer
-        > *
-          height: 1em
 

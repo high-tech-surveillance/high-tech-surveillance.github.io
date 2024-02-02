@@ -22,7 +22,7 @@ const config = {
       style: path.resolve(__dirname, "app/style/"),
       theme: path.resolve(
         __dirname,
-        "app/style/high-tech-surveillance/_index.sass"
+        "app/style/high-tech-surveillance/style.sass"
       ),
     },
   },
