@@ -1,10 +1,12 @@
-mixin webpage
+mixin webpage(pagename)
   doctype html
   html
     include _head
-    body
+    body(class= pagename)
       include _header
-      block
+
+      div.content
+        block
 
     if !isProduction
       script(src=require('./hmr.js'))
