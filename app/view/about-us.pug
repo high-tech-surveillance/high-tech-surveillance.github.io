@@ -2,7 +2,7 @@ include definitions
 
 +webpage('page-about-us')
   section.first-section.columns
-    div.left-column
+    div.column
       h1.title About 
         em.hilight-red us
       p We are dedicated to our clients and their benefit from our strong mission and clear vision.
@@ -10,7 +10,7 @@ include definitions
       p If you are looking for secure your business, call us today for a comprehensive solution package based on your budget and requirements
       h2 Contact us!
       include _contact-mediums-menu
-    div.right-column
-      img(src=require("@assets/img/logo.svg"))
+    div.column
+      img.logo(src=require("@assets/img/logo.svg"))
   section.second-section
   section.third-section
