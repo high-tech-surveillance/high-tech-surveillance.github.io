@@ -1,15 +1,15 @@
 include definitions
 
 +webpage('page-about-us')
-  section.first-section.columns
+  section.first-section.columns.font-assistant.font-18px
     div.column
-      h1.title About 
-        em.hilight-red us
+      h1.source-sans.title About #[span.hilight-red us]
       p We are dedicated to our clients and their benefit from our strong mission and clear vision.
       hr
       p If you are looking for secure your business, call us today for a comprehensive solution package based on your budget and requirements
-      h2 Contact us!
-      include _contact-mediums-menu
+      div.centered
+        h2.font-assistant.uppercase.margin-0 Contact us!
+        include _contact-mediums-menu
     div.column
       img.logo(src=require("@assets/img/logo.svg"))
   section.second-section

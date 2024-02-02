@@ -1,0 +1,43 @@
+@use "globals" as *
+// Arial, Verdana, Tahoma, Times New Roman, Georgia, Garamond
+
+.source-sans
+  font: 'Source Sans Pro'
+
+.title
+  margin: 0
+  text-transform: uppercase
+  font-weight: 900
+  font-size: 5.83rem
+
+.font-assistant
+  font-family: "Assistant"
+
+.font-18px
+  font-size: 1.5rem
+
+.title-case
+  text-transform: lowercase
+  &:first-letter
+    text-transform: uppercase
+.font-assistant-35
+  font-family: $font-assistant
+  font-size: 2.916rem
+
+.menu-text
+  font-family: $font-assistant
+  font-size: 1.5rem
+  text-transform: uppercase
+  a
+    text-decoration: none
+    color: black
+
+.heading-text
+  font-family: $source-sans-font
+  font-size: 2rem
+  font-weight: bold
+  text-transform: uppercase
+
+html
+  font-family: $source-sans-font,  $font-assistant, 'sans'
+  font-size:12px

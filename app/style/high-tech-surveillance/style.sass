@@ -1,16 +1,17 @@
 @use "globals" as *
 @use "page-about-us"
 @use "media-mobile"
+@use "font-styles"
 
-// Web safe fonts
-// Arial, Verdana, Tahoma, Times New Roman, Georgia, Garamond
-.title-case
-  text-transform: lowercase
-  &:first-letter
-    text-transform: uppercase
-.font-assistant-35
-  font-family: $font-assistant
-  font-size: 2.916rem
+.centered
+  text-align: center
+
+.uppercase
+  text-transform: uppercase
+
+.margin-0
+  margin: 0
+
 .contact-mediums
   svg
     fill: $red-colour
@@ -73,25 +74,9 @@
 .hilight-blue
   color: $hilight-blue
 html
-  font-family: $source-sans-font,  $font-assistant, 'sans'
-  font-size:12px
   color: black
   body
     margin: 0
-
-.heading-text
-  font-family: $source-sans-font
-  font-size: 2rem
-  font-weight: bold
-  text-transform: uppercase
-
-.menu-text
-  font-family: $font-assistant
-  font-size: 1.5rem
-  text-transform: uppercase
-  a
-    text-decoration: none
-    color: black
 
 header 
   .wrapper
