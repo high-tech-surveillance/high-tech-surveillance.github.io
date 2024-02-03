@@ -1,8 +1,12 @@
 @use "globals" as *
+// Mos common web fonts
 // Arial, Verdana, Tahoma, Times New Roman, Georgia, Garamond
+html
+  font-family: $source-sans-font,  $font-assistant, 'sans'
+  font-size:12px
 
 .source-sans
-  font: 'Source Sans Pro'
+  font: $source-sans-font
 
 .title
   margin: 0
@@ -11,10 +15,13 @@
   font-size: 5.83rem
 
 .font-assistant
-  font-family: "Assistant"
+  font-family: $font-assistant
 
 .font-18px
-  font-size: 1.5rem
+  font-size: 1.5rem // 18px for rem = 12px
+
+.font-36px
+  font-size: 3rem
 
 .title-case
   text-transform: lowercase
@@ -22,11 +29,11 @@
     text-transform: uppercase
 .font-assistant-35
   font-family: $font-assistant
-  font-size: 2.916rem
+  font-size: 2.916rem // 35 pixels aproximately for "rem" equals 12 pixels
 
 .menu-text
   font-family: $font-assistant
-  font-size: 1.5rem
+  font-size: 1.5rem // 18 pixels
   text-transform: uppercase
   a
     text-decoration: none
@@ -34,10 +41,7 @@
 
 .heading-text
   font-family: $source-sans-font
-  font-size: 2rem
+  font-size: 2rem // 24 pixels
   font-weight: bold
   text-transform: uppercase
 
-html
-  font-family: $source-sans-font,  $font-assistant, 'sans'
-  font-size:12px
