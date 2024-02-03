@@ -14,19 +14,33 @@
     background-color: $pale-blue
     display: flex
   .third-section
-    padding: 0 5%
     .overlay
       position: relative
+      img
+        width: 100%
       .footer
+        margin-bottom: 5rem
         display: flex
-        justify-content: space-around
+        width: 100%
+        justify-content: space-between
+        align-items: center
         position: absolute
         bottom: 0
         color: white
+        h5
+          margin: 0
+          line-height: 1em
+          width: auto
+          text-align: right
         svg
           fill: white
           .cls-1
             stroke: white
+        > *
+          &:first-child
+            margin-left: 4rem
+          &:last-child
+            margin-right: 4rem
     p
       max-width: 66%
       text-align: justify
