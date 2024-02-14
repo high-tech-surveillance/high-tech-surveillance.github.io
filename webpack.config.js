@@ -11,6 +11,7 @@ const config = {
   entry: {
     index: "./app/view/index.pug",
     "about-us": "./app/view/about-us.pug",
+    gallery: "./app/view/gallery.pug",
   },
   output: {
     path: path.resolve(__dirname, OUTPUT_DIR),
