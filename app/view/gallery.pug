@@ -5,9 +5,10 @@ include definitions
     span.left-side
       div.font-48px.uppercase #[strong Remote #[span.hilight-red surveillance]]
       div.font-26px.uppercase #[strong For any situation]
-      div#photo-reel
-        img#reel-content
+      showcase-carousel
+      //- div#photo-reel
+      //- img#reel-content
     span.right-side
       div.blue-button.uppercase Get a quote
 
-
+script(src=require("showcase-carousel"))

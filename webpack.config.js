@@ -21,6 +21,10 @@ const config = {
     alias: {
       assets: path.resolve(__dirname, "app/assets/"),
       style: path.resolve(__dirname, "app/style/"),
+      "showcase-carousel": path.resolve(
+        __dirname,
+        "components/showcase-carousel/dist/"
+      ),
       theme: path.resolve(
         __dirname,
         "app/style/high-tech-surveillance/style.sass"
