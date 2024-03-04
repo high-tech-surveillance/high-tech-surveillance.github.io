@@ -9,7 +9,7 @@ header
       img.logo(src=require("assets/img/logo.svg"))
       span.heading-text= business.name
     nav.navigation-menu.menu-text#navigation-menu
-      each menuitem of ([['Home', "/"],['About us', '/about-us.html'], ['Gallery', '/gallery.html'], ['Quote', ''], ['Contact us', '']])
+      each menuitem of ([['Home', "/"],['About us', '/about-us.html'], ['Gallery', '/gallery.html']])
         +menu-entry(menuitem[0], menuitem[1])
       a.toggle-menu-button(onclick="toggleMenu()")
         img(src=require("assets/img/bars.svg"))
