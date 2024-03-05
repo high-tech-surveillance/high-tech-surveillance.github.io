@@ -2,13 +2,12 @@ include definitions
 +webpage('gallery')
   section#gallery.font-source-sans-pro
     include _contact-mediums-menu
-    span.left-side
-      div.font-48px.uppercase #[strong Remote #[span.hilight-red surveillance]]
-      div.font-26px.uppercase #[strong For any situation]
-      showcase-carousel
+    div.gallery-grid
+      div.first-column.font-48px.uppercase #[strong Remote #[span.hilight-red surveillance]]
+      div.first-column.font-26px.uppercase #[strong For any situation]
+      showcase-carousel.first-column
         iframe(src="https://www.youtube.com/embed/6aYUIRDQXeQ?si=Sjr0p6wHqm4XUgi5", title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", allowfullscreen)
-
-    span.right-side
-      div.blue-button.uppercase Get a quote
+      div.centered-content
+        div.blue-button.uppercase Get a quote
 
 script(src=require("showcase-carousel"))

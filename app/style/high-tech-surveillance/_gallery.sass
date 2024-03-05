@@ -6,14 +6,17 @@
   max-width: 1200px
   nav.contact-mediums
     text-align: right
-  .left-side, .right-side
-    display: inline-block
-    vertical-align: middle
+  .gallery-grid
+    display: grid
+    grid-template-columns: repeat(2,1fr)
+  .first-column
     text-align: center
-  .left-side
-    width: 65%
-  .right-side
-    width: 35%
+    grid-column: 1
+  .centered-content
+    display: flex
+    justify-content: center
+    align-items: center
+
 
 showcase-carousel
   height: 300px
