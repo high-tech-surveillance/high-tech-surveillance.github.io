@@ -13,6 +13,7 @@ const config = {
     index: "./app/view/index.pug",
     "about-us": "./app/view/about-us.pug",
     gallery: "./app/view/gallery.pug",
+    contact: "./app/view/contact.pug",
   },
   output: {
     path: path.resolve(__dirname, OUTPUT_DIR),
@@ -21,6 +22,7 @@ const config = {
   resolve: {
     alias: {
       assets: path.resolve(__dirname, "app/assets/"),
+      logo: path.resolve(__dirname, "app/assets/img/logo.svg"),
       style: path.resolve(__dirname, "app/style/"),
       "showcase-carousel": path.resolve(
         __dirname,
