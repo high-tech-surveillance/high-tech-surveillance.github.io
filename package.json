@@ -2,6 +2,7 @@
   "devDependencies": {
     "@webdiscus/pug-loader": "^2.10",
     "@webpack-cli/generators": "^3.0.7",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.9.1",
     "enhanced-resolve": "^5.7",
     "prettier": "^3.2.4",
@@ -20,7 +21,7 @@
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "prebuild":"rm -f dist/*",
+    "prebuild": "rm -f dist/*",
     "watch": "webpack --watch",
     "serve": "webpack serve --mode development --env development --live-reload"
   }

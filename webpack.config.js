@@ -1,6 +1,7 @@
 const path = require("path");
 const PugPlugin = require("pug-plugin");
 
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const isProduction = process.env.NODE_ENV == "production";
 const OUTPUT_DIR = "dist";
 
@@ -46,6 +47,9 @@ const config = {
     },
   },
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: ["CNAME"],
+    }),
     new PugPlugin({
       verbose: true,
       pretty: true,
