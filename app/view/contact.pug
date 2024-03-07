@@ -8,18 +8,18 @@ include definitions
 
 +webpage('contact')
   section(id="contact-form")
-    div.left-column
+    div(style="text-align:center;width:50%;display:inline-block;").left-column
       h1 DROP US A #[span.hilight-red LINE!]
-      //-img(src="https://picsum.photos/340")
+      img(src=require("assets/img/security-camera.png"))
       h2 #[span.hilight-red Better yet,] see ur in person!
       p We love our costumers, so feel free to visit us during normal business hours
-    div.right-column
-      label(for="name") Name
-      input(name="name" type="text")
-      label(for="email") Email
-      input(name="email" type="text" )
-      label(for="message") Message
-      textarea(name="message")
+    //-div(style="display:inline-block;").right-column
+      //-label(for="name") Name
+      //-input(name="name" type="text")
+      //-label(for="email") Email
+      //-input(name="email" type="text" )
+      //-label(for="message") Message
+      //-textarea(name="message")
   section.business-card
     //-iframe(width="600", height="450",  style="border:0", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(street_address)},${zip_code},${encodeURIComponent(city)}`)
     div.address-footer
