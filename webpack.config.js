@@ -14,6 +14,7 @@ const config = {
     "about-us": "./app/view/about-us.pug",
     gallery: "./app/view/gallery.pug",
     contact: "./app/view/contact.pug",
+    quote: "./app/view/quote.pug",
   },
   output: {
     path: path.resolve(__dirname, OUTPUT_DIR),
