@@ -13,7 +13,7 @@ include definitions
       img(src=require("assets/img/security-camera.png"))
       h2 #[span.hilight-red Better yet,] see us in person!
       p.font-24px We love our costumers, so feel free to visit us during normal business hours
-    div(style="display:inline-block;width:49%").right-column
+    div(style="display:none;width:49%").right-column
       form
         label(for="name") Name
         input(name="name" type="text")
@@ -23,8 +23,8 @@ include definitions
         textarea(name="message")
         button(type="submit") Send
   section.business-card
-    //-iframe(width="1000", height="300",  style="border:0", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(street_address)},${zip_code},${encodeURIComponent(city)}`)
-    div(style="width:1000px;height:300px;background-color:white;display:inline-block;margin:auto")
+    iframe(width="1000", height="300",  style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(street_address)},${zip_code},${encodeURIComponent(city)}`)
+    //-div(style="width:100%;height:300px;background-color:white;margin:auto")
     div.address-footer
       img.logo(style="max-height: 150px;margin-right: 52px" src=require("logo"))
       div.business-identity
