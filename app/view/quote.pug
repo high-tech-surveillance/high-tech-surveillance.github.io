@@ -1,37 +1,39 @@
 include definitions
 +webpage('quote')
-  div.main-wrapper.two-columns
-    div.left-column
-      img(src=require("assets/img/building-and-camera.png"))
-    div.right-column
-      h1.hilight-red.font-40px Each location has it's
-      h1.hilight-blue.font-40px own security needs
-      p.font-24px #[strong] Tell us more about your security concerns so we can get started on a plan to address them.
-      p.font-18px Your time is valuable and we will make sure to get back to you as soon as posible
+  section#request-quote
+    include _contact-mediums-menu
+    div.row-wrapper
+      div
+        img(src=require("assets/img/building-and-camera.png"))
+      div
+        h1.hilight-red.font-40px Each location has it's
+        h1.hilight-blue.font-40px own security needs
+        p.font-24px #[strong] Tell us more about your security concerns so we can get started on a plan to address them.
+        p.font-18px Your time is valuable and we will make sure to get back to you as soon as posible
 
-      a(href="tel:+18004015869") #[h2 HTS +1 800 401 5869]
-      button Resquest a quotation
-  div.hidden-content.two-columns
-    h1 Request a #[span.hilight-red quotation]
-    div.left-column
-      form
-        label(for="name") Name
-        input(id="name", name="name" )
-        label(for="email") Email
-        input(id="email", name="email")
-        label(for="zip-code") Zip code
-        input(id="zip-code", name="zip-code")
-        label(for="usage") Building usage
-        select(id="usage", name="usage")
-          option(value="business") Business
-          option(value="residence") Residence
-        button Send
-      div.business-data
-        img.logo(src=require("logo"), style="width: 10rem")
-        h1 HTS
-        address 1115 Kansas Avenue #[br] Modesto California, 95351, United States #[br] +1 800 401 5869
-    div.right-column
-      label(for="square-footage") Square footage of building and size of surrounding property
-      textarea(id="square-footage")
-      label(for="concerns") What are your security concerns
-      textarea(id="concerns")
+        a(href="tel:+18004015869") #[h2 HTS +1 800 401 5869]
+        button Resquest a quotation
+    div.hidden-content.two-columns
+      h1 Request a #[span.hilight-red quotation]
+      div.left-column
+        form
+          label(for="name") Name
+          input(id="name", name="name" )
+          label(for="email") Email
+          input(id="email", name="email")
+          label(for="zip-code") Zip code
+          input(id="zip-code", name="zip-code")
+          label(for="usage") Building usage
+          select(id="usage", name="usage")
+            option(value="business") Business
+            option(value="residence") Residence
+          button Send
+        div.business-data
+          img.logo(src=require("logo"), style="width: 10rem")
+          h1 HTS
+          address 1115 Kansas Avenue #[br] Modesto California, 95351, United States #[br] +1 800 401 5869
+      div.right-column
+        label(for="square-footage") Square footage of building and size of surrounding property
+        textarea(id="square-footage")
+        label(for="concerns") What are your security concerns
+        textarea(id="concerns")

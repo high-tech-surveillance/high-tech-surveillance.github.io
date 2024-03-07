@@ -8,7 +8,8 @@ include definitions
 - const API_KEY = "AIzaSyBs1x53BAlhd_2_PUJCgAkjxT7PTWDhnM8" 
 
 +webpage('contact')
-  section(id="contact-form")
+  section#contact-form
+    include _contact-mediums-menu
     div(style="text-align:center;width:49%;display:inline-block;").left-column
       h1 Drop us a #[span.hilight-red line!]
       img(src=require("assets/img/security-camera.png"))
