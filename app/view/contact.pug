@@ -9,10 +9,10 @@ include definitions
 +webpage('contact')
   section(id="contact-form")
     div(style="text-align:center;width:50%;display:inline-block;").left-column
-      h1 DROP US A #[span.hilight-red LINE!]
+      h1 Drop us a #[span.hilight-red line!]
       img(src=require("assets/img/security-camera.png"))
-      h2 #[span.hilight-red Better yet,] see ur in person!
-      p We love our costumers, so feel free to visit us during normal business hours
+      h2 #[span.hilight-red Better yet,] see us in person!
+      p.font-24px We love our costumers, so feel free to visit us during normal business hours
     //-div(style="display:inline-block;").right-column
       //-label(for="name") Name
       //-input(name="name" type="text")
@@ -25,5 +25,5 @@ include definitions
     div.address-footer
       //-img.logo(src=require("logo"))
       div.business-identity
-        div.business-name HTS
-        address #{street_address} #[br] #{city}, #{zip_code}, #{country} #[br] #[a(href=`phone://${telephone}`)= telephone]
+        h1 HTS
+        address.font-18px #{street_address} #[br] #{city}, #{zip_code}, #{country} #[br] #[a(href=`tel:${telephone}`)= telephone]
