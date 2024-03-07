@@ -25,7 +25,7 @@ include definitions
   section.business-card
     //-iframe(width="600", height="450",  style="border:0", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(street_address)},${zip_code},${encodeURIComponent(city)}`)
     div.address-footer
-      img.logo(src=require("logo"))
+      img.logo(style="max-height: 150px;margin-right: 52px" src=require("logo"))
       div.business-identity
         h1 HTS
         address.font-18px #{street_address} #[br] #{city}, #{zip_code}, #{country} #[br] #[a(href=`tel:${telephone}`)= telephone]
