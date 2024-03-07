@@ -8,22 +8,24 @@ include definitions
 
 +webpage('contact')
   section(id="contact-form")
-    div(style="text-align:center;width:50%;display:inline-block;").left-column
+    div(style="text-align:center;width:49%;display:inline-block;").left-column
       h1 Drop us a #[span.hilight-red line!]
       img(src=require("assets/img/security-camera.png"))
       h2 #[span.hilight-red Better yet,] see us in person!
       p.font-24px We love our costumers, so feel free to visit us during normal business hours
-    //-div(style="display:inline-block;").right-column
-      //-label(for="name") Name
-      //-input(name="name" type="text")
-      //-label(for="email") Email
-      //-input(name="email" type="text" )
-      //-label(for="message") Message
-      //-textarea(name="message")
+    div(style="display:inline-block;width:49%").right-column
+      form
+        label(for="name") Name
+        input(name="name" type="text")
+        label(for="email") Email
+        input(name="email" type="text" )
+        label(for="message") Message
+        textarea(name="message")
+        button(type="submit") Send
   section.business-card
     //-iframe(width="600", height="450",  style="border:0", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(street_address)},${zip_code},${encodeURIComponent(city)}`)
     div.address-footer
-      //-img.logo(src=require("logo"))
+      img.logo(src=require("logo"))
       div.business-identity
         h1 HTS
         address.font-18px #{street_address} #[br] #{city}, #{zip_code}, #{country} #[br] #[a(href=`tel:${telephone}`)= telephone]
