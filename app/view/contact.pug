@@ -23,7 +23,8 @@ include definitions
         textarea(name="message")
         button(type="submit") Send
   section.business-card
-    //-iframe(width="600", height="450",  style="border:0", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(street_address)},${zip_code},${encodeURIComponent(city)}`)
+    //-iframe(width="1000", height="300",  style="border:0", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(street_address)},${zip_code},${encodeURIComponent(city)}`)
+    div(style="width:1000px;height:300px;background-color:white;display:inline-block;margin:auto")
     div.address-footer
       img.logo(style="max-height: 150px;margin-right: 52px" src=require("logo"))
       div.business-identity
