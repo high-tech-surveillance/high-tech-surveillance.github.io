@@ -1,3 +1,5 @@
+- const business = require("/app/business-card.json");
+
 include definitions
 +webpage('quote')
   section#request-quote
@@ -11,7 +13,7 @@ include definitions
         p.font-24px #[strong Tell us more about your security concerns so we can get started on a plan to address them.]
         p.font-18px Your time is valuable and we will make sure to get back to you as soon as posible
 
-        a.contact-phone(href="tel:+18004015869") #[h2 HTS +1 800 401 5869]
+        a.contact-phone(href=`tel:${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone}]
         button.red-button Request a quotation
     div.hidden-content.form-wrapper
       h1 Request a #[span.hilight-red quotation]
@@ -32,7 +34,7 @@ include definitions
           img.logo(src=require("logo"), style="width: 10rem")
           div.business-address
             h1 HTS
-            address 1115 Kansas Avenue #[br] Modesto California, 95351, United States #[br] +1 800 401 5869
+            address #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone}
       div
         label(for="square-footage") Square footage of building and size of surrounding property
         textarea(id="square-footage")
