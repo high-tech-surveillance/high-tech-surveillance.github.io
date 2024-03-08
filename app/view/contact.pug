@@ -1,4 +1,5 @@
 include definitions
+- const businessCard = require("/app/business-card.json")
 - var telephone = '+18004015869'
 - var street_address = '1115 Kansas Avenue'
 - var city = 'Modesto, California'
@@ -23,10 +24,10 @@ include definitions
         textarea(name="message")
         button(type="submit") Send
   section.business-card
-    iframe(width="1000", height="300",  style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(street_address)},${zip_code},${encodeURIComponent(city)}`)
+    iframe(width="1000", height="300",  style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(businessCard.address.street_line)},${businessCard.address.zip_code},${encodeURIComponent(businessCard.address.city)}`)
     //-div(style="width:100%;height:300px;background-color:white;margin:auto")
     div.address-footer
       img.logo(style="max-height: 150px;margin-right: 52px" src=require("logo"))
       div.business-identity
         h1 HTS
-        address.font-18px #{street_address} #[br] #{city}, #{zip_code}, #{country} #[br] #[a(href=`tel:${telephone}`)= telephone]
+        address.font-18px #{businessCard.address.street_line} #[br] #{businessCard.address.city}, #{businessCard.address.zip_code}, #{businessCard.address.country} #[br] #[a(href=`tel:${businessCard['contact-mediums'].telephone}`)= businessCard['contact-mediums'].telephone]

@@ -1,10 +1,18 @@
 {
   "name":"High Tech Surveillance",
+  "address": {
+    "street_line": "1115 Kansas Avenue",
+    "city": "Modesto",
+    "state": "California",
+    "zip_code": 95351,
+    "country": "United States"
+  },
   "contact-mediums":{
-    "mobilephone":"",
+    "telephone":"+18559066435",
     "whatsapp":"",
     "facebook":"",
     "tiktok":"",
-    "youtube":""
+    "youtube":"",
+    "instagram": "https://www.instagram.com/htssecurity24/"
   }
 }
