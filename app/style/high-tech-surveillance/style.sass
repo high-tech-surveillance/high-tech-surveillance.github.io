@@ -4,16 +4,33 @@
 @use "media-mobile"
 @use "font-styles"
 
+img
+  width: 100%
 .centered
   text-align: center
 
+.centered-column
+  display: flex
+  flex-direction: column
+  align-items: center
+
+a.contact-phone
+  text-decoration: none
+  color: black
+  h2
+    margin: 1em
 .uppercase
   text-transform: uppercase
 
 .margin-0
   margin: 0
 
+section
+  max-width: 1200px
+
 #gallery, #request-quote, #contact-form
+  margin-top: 1rem
+  padding: 0 3em
   nav.contact-mediums
     text-align: right
 
@@ -30,6 +47,22 @@
 .hilight-darkred
   color: $red-colour
 
+.red-button
+  text-transform: uppercase
+  max-width: 10em
+  font-family: $font-assistant
+  font-size: 2rem
+  font-weight: bold
+  color: white
+  background-color: $red-colour
+  border-radius: 15px
+  border-style: none
+  padding: 0.4em 1.3em  0.4em 1.3em
+  display: inline-block
+  box-shadow: 7px 7px 5px 2px rgba(0, 0, 0, 0.3)
+  &:hover
+    cursor: pointer
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3)
 .blue-button
   font-family: $font-assistant
   font-size: 2rem
