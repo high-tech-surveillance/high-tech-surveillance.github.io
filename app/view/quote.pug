@@ -13,9 +13,9 @@ include definitions
 
         a.contact-phone(href="tel:+18004015869") #[h2 HTS +1 800 401 5869]
         button.red-button Request a quotation
-    div.hidden-content.two-columns
+    div.hidden-content.form-wrapper
       h1 Request a #[span.hilight-red quotation]
-      div.left-column
+      div
         form
           label(for="name") Name
           input(id="name", name="name" )
@@ -27,12 +27,13 @@ include definitions
           select(id="usage", name="usage")
             option(value="business") Business
             option(value="residence") Residence
-          button Send
+          button.blue-button Send
         div.business-data
           img.logo(src=require("logo"), style="width: 10rem")
-          h1 HTS
-          address 1115 Kansas Avenue #[br] Modesto California, 95351, United States #[br] +1 800 401 5869
-      div.right-column
+          div.business-address
+            h1 HTS
+            address 1115 Kansas Avenue #[br] Modesto California, 95351, United States #[br] +1 800 401 5869
+      div
         label(for="square-footage") Square footage of building and size of surrounding property
         textarea(id="square-footage")
         label(for="concerns") What are your security concerns
