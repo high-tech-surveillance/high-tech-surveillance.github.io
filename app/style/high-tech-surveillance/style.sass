@@ -1,5 +1,6 @@
 @use "globals" as *
 @use "page-about-us"
+@use "page-quote"
 @use "gallery"
 @use "media-mobile"
 @use "font-styles"
@@ -9,19 +10,13 @@ img
 .centered
   text-align: center
 
-.form-wrapper
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  >h1:first-child
-    flex: 100%
-  *
-    flex: 50%
-
 .centered-column
   display: flex
   flex-direction: column
   align-items: center
+
+.half-width
+  width: 50%
 
 a.contact-phone
   text-decoration: none

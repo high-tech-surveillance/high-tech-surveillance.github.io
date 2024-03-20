@@ -19,24 +19,32 @@ include definitions
       h1 Request a #[span.hilight-red quotation]
       div
         form
-          label(for="name") Name
-          input(id="name", name="name" )
-          label(for="email") Email
-          input(id="email", name="email")
-          label(for="zip-code") Zip code
-          input(id="zip-code", name="zip-code")
-          label(for="usage") Building usage
-          select(id="usage", name="usage")
-            option(value="business") Business
-            option(value="residence") Residence
+          div.row-wrapper
+            div.half-width
+              div.input-wrapper
+                label(for="name") Name
+                input(id="name", name="name" )
+              div.input-wrapper
+                label(for="email") Email
+                input(id="email", name="email")
+              div.input-wrapper
+                label(for="zip-code") Zip code
+                input(id="zip-code", name="zip-code")
+              div
+                label(for="usage") Building usage
+                select(id="usage", name="usage")
+                  option(value="business") Business
+                  option(value="residence") Residence
+            div.half-width
+              div
+                label(for="square-footage") Square footage of building and size of surrounding property
+                textarea(id="square-footage")
+              div
+                label(for="concerns") What are your security concerns
+                textarea(id="concerns")
           button.blue-button Send
         div.business-data
           img.logo(src=require("logo"), style="width: 10rem")
           div.business-address
             h1 HTS
             address #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone}
-      div
-        label(for="square-footage") Square footage of building and size of surrounding property
-        textarea(id="square-footage")
-        label(for="concerns") What are your security concerns
-        textarea(id="concerns")
