@@ -4,22 +4,34 @@ $colour-gray: #727376
 form
   font-size: 14px
   font-family: "Assistant"
+  .textarea-wrapper
+    label
+      display: block
+      box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4)
+    textarea
+      box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4)
+      background: $colour-bone
+      border: none
+      border-radius: 5px
+      height: 15em
+    margin-bottom: 35px
   .input-wrapper
     margin-bottom: 17px
     border-radius: 5px
     display: flex
     background: $colour-bone
     box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4)
-    label
-      color: white
-      text-transform: uppercase
-      padding: 4px 11px 4px 11px
-      min-width: 4em
-      border-radius: 5px
-      background: $colour-gray
     input
       flex-grow: 2
       background: none
       border: none
+    label
+      min-width: 4em
+  label
+    color: white
+    text-transform: uppercase
+    padding: 4px 11px 4px 11px
+    border-radius: 5px
+    background: $colour-gray
   textarea
     width: 100%
