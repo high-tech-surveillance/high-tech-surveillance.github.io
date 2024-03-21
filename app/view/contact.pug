@@ -20,7 +20,7 @@ include definitions
         textarea(name="message")
         button(type="submit") Send
   section.business-location
-    iframe(width="1000", height="300",  style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(businessCard.address.street_line)},${businessCard.address.zip_code},${encodeURIComponent(businessCard.address.city)}`)
+    iframe(width="100%", height="300",  style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(businessCard.address.street_line)},${businessCard.address.zip_code},${encodeURIComponent(businessCard.address.city)}`)
     //-div(style="width:100%;height:300px;background-color:white;margin:auto")
     div.address-footer
       div.business-card
