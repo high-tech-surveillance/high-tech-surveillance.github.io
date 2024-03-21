@@ -1,9 +1,24 @@
 $colour-bone: #d4d4d4
 $colour-gray: #727376
 
-form
+.form-wrapper
+  >h1, .input-identification
+    margin-left: 3rem
+
+form#quote-request
   font-size: 14px
   font-family: "Assistant"
+  display: grid
+  grid-template-columns: 1fr 1fr
+  column-gap: 2.5em
+  row-gap: 0.5em
+  .business-contact
+    grid-column: 1
+    grid-row: 2
+    button
+      margin-left: 6rem
+      margin-bottom: 6rem
+      text-transform: uppercase
   .textarea-wrapper
     label
       display: block
@@ -56,3 +71,5 @@ form
       option
         color: black
         background: $colour-bone
+  .logo
+    margin-right: 3rem
