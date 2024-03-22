@@ -17,7 +17,7 @@ include definitions
         button.red-button Request a quotation
     div.hidden-content.form-wrapper
       div
-        form#quote-request
+        form#quote-request(action="&#77;&#65;&#73;&#108;&#84;&#79;&#58;&#101;&#109;&#105;&#114;&#46;&#104;&#101;&#114;&#114;&#101;&#114;&#97;&#46;&#97;&#117;&#116;&#111;&#109;&#97;&#116;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;", onclick="return (function hola(e){const body = document.createElement('input'); body.setAttribute('name', 'body'); body.setAttribute('value', 'Hola mundo') ; e.appendChild(body); })(this)" )
           h1 Request a #[span.hilight-red quotation]
           div.input-identification
             div.input-wrapper
@@ -50,3 +50,5 @@ include definitions
               div.business-address
                 h1 HTS
                 address #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone}
+
+script(src=require("/app/js/form-processor.js"))
