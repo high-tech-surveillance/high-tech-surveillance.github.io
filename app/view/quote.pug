@@ -16,9 +16,9 @@ include definitions
         a.contact-phone(href=`tel:${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone}]
         button.red-button Request a quotation
     div.hidden-content.form-wrapper
-      h1 Request a #[span.hilight-red quotation]
       div
         form#quote-request
+          h1 Request a #[span.hilight-red quotation]
           div.input-identification
             div.input-wrapper
               label(for="name") Name
