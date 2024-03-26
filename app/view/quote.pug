@@ -46,7 +46,7 @@ script(src=require("/app/js/form-processor.js"))
               label(for="concerns") What are your security concerns
               textarea(id="concerns")
             div.business-contact
-              button.blue-button Send
+              button.blue-button(onclick="assambleEmail()") Send
               div.business-card
                 img.logo(src=require("logo"), style="width: 10rem")
                 div.business-address
