@@ -1,0 +1,21 @@
+@use "globals" as *
+
+#contact-form form
+  .textarea-wrapper label
+    margin: 0.5em 0
+  input, textarea
+    background-color: $colour-dark-bone
+  label
+    color: white
+    background-color: $colour-blue-ocean
+    display: inline-block
+  button
+    color: white
+    font-weight: bold
+    background-color: $colour-blue
+    float: right
+    margin: 1em 0
+    &::after
+      clear: both
+      display: block
+      content: ''

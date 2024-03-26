@@ -1,5 +1,41 @@
-$colour-bone: #d4d4d4
-$colour-gray: #727376
+@use "globals" as *
+input
+  background: none
+  border: none
+.input-wrapper
+  box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4)
+  margin-bottom: 17px
+  border-radius: 5px
+  display: flex
+  input
+    flex-grow: 2
+  label
+    min-width: 4em
+
+.textarea-wrapper
+  width: 100%
+  label, textarea
+    box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4)
+  textarea
+    background: $colour-bone
+    border: none
+    border-radius: 5px
+    width: 100%
+    height: 230px
+
+button
+  font-size: 14px
+  padding: 14px 32px 14px 32px
+  text-transform: uppercase
+  box-sizing: border-box
+  box-shadow: 7px 7px 5px 2px rgba(0, 0, 0, 0.3)
+  border-radius: 15px 15px 15px 15px
+  border-style: none
+
+label
+  text-transform: uppercase
+  padding: 4px 11px 4px 11px
+  border-radius: 5px
 
 .hidden
   display: none !important
@@ -19,37 +55,10 @@ form#quote-request
   .business-contact
     grid-column: 1
     grid-row: 3
-    button
-      font-size: 14px
-      margin: 3px auto 72px 32px
-      padding: 13px 32px 15px 33px
-      text-transform: uppercase
-  .textarea-wrapper
-    width: 100%
-    label, textarea
-      display: block
-      box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4)
-    textarea
-      background: $colour-bone
-      border: none
-      border-radius: 5px
-      width: 100%
-      height: 230px
-      box-sizing: border-box
   div.input-identification div.input-wrapper:nth-child(even)
     margin-bottom: 27px
   .input-wrapper
-    margin-bottom: 17px
-    border-radius: 5px
-    display: flex
     background: $colour-bone
-    box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4)
-    input
-      flex-grow: 2
-      background: none
-      border: none
-    label
-      min-width: 4em
   label
     color: white
     text-transform: uppercase
@@ -82,3 +91,5 @@ form#quote-request
       line-height: 1.6
   .logo
     margin-right: 3rem
+  .textarea-wrapper label
+    display: block
