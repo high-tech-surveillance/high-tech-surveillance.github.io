@@ -16,11 +16,11 @@ function formToText(form) {
   return text;
 }
 
-function assambleEmail() {
-  let subject;
+function assambleEmail(subject = document.getElementById("subject")) {
+  let subjectElement;
   let body;
 
-  subject = document.getElementById("subject");
+  subjectElement = document.getElementById("subject");
   body = document.getElementById("body");
 
   function setupField(field, name) {
@@ -28,18 +28,18 @@ function assambleEmail() {
       field = document.createElement("input");
       field.setAttribute("type", "hidden");
       field.setAttribute("name", name);
-      document.getElementById("quote-request").appendChild(field);
+      document.getElementsByTagName("form")[0].appendChild(field);
     }
 
     return field;
   }
 
-  subject = setupField(subject, "subject");
-  subject.setAttribute("value", "Quotation request");
+  subjectElement = setupField(subjectElement, "subject");
+  subjectElement.setAttribute("value", subject || "New message from website");
   body = setupField(body, "body");
   body.setAttribute(
     "value",
-    formToText(document.getElementById("quote-request"))
+    formToText(document.getElementsByTagName("form")[0])
   );
 }
 

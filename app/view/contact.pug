@@ -2,6 +2,7 @@ include definitions
 - const businessCard = require("/app/business-card.json")
 - const API_KEY = "AIzaSyBs1x53BAlhd_2_PUJCgAkjxT7PTWDhnM8" 
 
+script(src=require("/app/js/form-processor.js"))
 +webpage('contact')
   section#contact-form
     include _contact-mediums-menu
@@ -13,17 +14,17 @@ include definitions
           h2 #[span.hilight-red Better yet,] see us in person!
           p.font-24px We love our costumers, so feel free to visit us during normal business hours
         div
-          form
+          form(action=`mailto:${businessCard['form-submit']}`)
             div.input-wrapper
               label(for="name") Name
-              input(name="name" type="text")
+              input(id="input_name", name="name" type="text")
             div.input-wrapper
               label(for="email") Email
               input(name="email" type="text" )
             div.textarea-wrapper
               label(for="message") Message
               textarea(name="message")
-            button(type="submit") Send
+            button(type="submit", onclick="assambleEmail(`New message from: ${document.getElementById('input_name').value}`)") Send
   section.business-location
     iframe(width="100%", height="300",  style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(businessCard.address.street_line)},${businessCard.address.zip_code},${encodeURIComponent(businessCard.address.city)}`)
     div.address-footer
