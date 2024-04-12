@@ -23,6 +23,7 @@ const config = {
   resolve: {
     alias: {
       assets: path.resolve(__dirname, "app/assets/"),
+      font: path.resolve(__dirname, "app/assets/fonts"),
       logo: path.resolve(__dirname, "app/assets/img/logo.svg"),
       style: path.resolve(__dirname, "app/style/"),
       "showcase-carousel": path.resolve(

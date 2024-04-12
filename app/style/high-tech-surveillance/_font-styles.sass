@@ -1,7 +1,19 @@
 @use "globals" as *
-// Mos common web fonts
+// Most common web fonts
 // Arial, Verdana, Tahoma, Times New Roman, Georgia, Garamond
+//
+// When a font doesn't exists on the system, it should be imported.
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+@font-face
+  font-family: $source-sans-font
+  font-weight: 700
+  src: url('font/SourceSansPro-Bold.otf')
+@font-face
+  font-family: $source-sans-font
+  font-weight: 900
+  src: url('font/SourceSansPro-Black.otf')
+
 html
   font-family: $source-sans-font,  $font-assistant, 'sans'
   font-size:12px
@@ -16,8 +28,27 @@ html
 .font-source-sans-pro, h1
   font-family: $source-sans-font
 
-h1, h2, h3, h4, h5
+// reset
+h1, h2, h3, h4, h5, h6, p
   margin: 0
+
+.font-48px, h1
+  font-size: 4rem
+.font-36px, h2
+  font-size: 3rem
+.font-26px,h3
+  font-size: 2.1667rem
+.font-24px,h4
+  font-size: 2rem // 18px for rem = 12px
+.font-18px,h5
+  font-size: 1.5rem // 18px for rem = 12px
+p, h6
+  font-size: 1rem
+
+h4
+  font-weight: bold
+  line-height: 1.2em
+  text-transform: uppercase
 
 address
   font-family: $font-assistant
@@ -46,18 +77,7 @@ button
 .font-assistant, p
   font-family: $font-assistant
 
-.font-24px
-  font-size: 2rem // 18px for rem = 12px
-.font-18px
-  font-size: 1.5rem // 18px for rem = 12px
 
-.font-48px, h1
-  font-size: 4rem
-
-.font-26px
-  font-size: 2.1667rem
-.font-36px, h2
-  font-size: 3rem
 .unbullet
   list-style-type: none
 .capitalize
