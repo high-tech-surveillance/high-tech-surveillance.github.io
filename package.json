@@ -18,11 +18,12 @@
   "description": "High Tech Surveillance website",
   "name": "hts-website",
   "scripts": {
+    "prebuild": "rm -f dist/*",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "prebuild": "rm -f dist/*",
-    "watch": "webpack --watch",
-    "serve": "webpack serve --mode development --env development --live-reload"
+    "dev": "webpack serve --mode development --env development --live-reload",
+    "deploy": "GIT_DIR=./dist/.git GIT_WORK_TREE=./dist/ sh -c \"git add -A && git commit -m 'new: user: New release deployed' && git push\"",
+    "watch": "webpack --watch"
   }
 }
