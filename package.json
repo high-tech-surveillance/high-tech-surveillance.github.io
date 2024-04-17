@@ -5,6 +5,7 @@
     "autoprefixer": "^10.4.19",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.9.1",
+    "cssnano": "^6.1.2",
     "enhanced-resolve": "^5.7",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
