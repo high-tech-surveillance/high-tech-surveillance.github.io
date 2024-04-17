@@ -1,3 +1,4 @@
+const autoprefixer = require("autoprefixer");
 const path = require("path");
 const PugPlugin = require("pug-plugin");
 
@@ -83,7 +84,16 @@ const config = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ["css-loader", "sass-loader"],
+        use: [
+          {
+            loader: "css-loader",
+            options: { importLoaders: 1 },
+          },
+          { loader: "postcss-loader" },
+          {
+            loader: "sass-loader",
+          },
+        ],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|mp4)$/i,
