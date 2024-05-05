@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+const pug = require("pug");
+
 module.exports = {
-  content: ["./app/**/*.{html,js,pug}"],
-  theme: {
-    extend: {},
+  content: {
+    files: ["./app/**/*.{pug}"],
+    transform: {
+      pug: (content) => {
+        return pug.render(content);
+      },
+    },
   },
-  plugins: [],
+  presets: [],
+  corePlugins: [],
 };
