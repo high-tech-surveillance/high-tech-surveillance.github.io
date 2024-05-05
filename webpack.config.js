@@ -89,7 +89,7 @@ const config = {
             loader: "css-loader",
             options: { importLoaders: 1 },
           },
-          { loader: "postcss-loader" },
+          //          { loader: "postcss-loader" },
           {
             loader: "sass-loader",
           },
