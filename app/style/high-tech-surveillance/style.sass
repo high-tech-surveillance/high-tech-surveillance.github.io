@@ -5,10 +5,18 @@
 @use "gallery"
 @use "media-mobile"
 @use "font-styles"
+@use "font-face"
 
-@tailwind base
-@tailwind components
+//@tailwind base
+//@tailwind components
 @tailwind utilities
+
+@layer utilities
+  .firstcase
+    text-transform: lowercase
+    &:first-letter
+      text-transform: uppercase
+
 
 img
   max-width: 100%
