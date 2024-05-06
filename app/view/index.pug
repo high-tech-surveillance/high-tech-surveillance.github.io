@@ -1,3 +1,11 @@
 include definitions
-+webpage
-  include presentation
++webpage('index')
+  div.editorial-cover
+    img(src=require("assets/img/by-peter-pivak-from-unsplash.jpg"))
+    div.editorial-bullet
+      p.first-line Your #[span.hilight-red eyes] #[br] and #[span.hilight-blue ears]
+      p.second-line #[strong while you are away]
+      hr
+      p.font-assistant.title-case(class="text-[35px]") Let us #[strong build] and #[strong maintain]
+      p.font-assistant-35.hilight-darkred.title-case #[strong your security]
+      a.blue-button Get a quote
