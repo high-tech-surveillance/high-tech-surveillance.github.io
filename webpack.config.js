@@ -1,6 +1,7 @@
 const autoprefixer = require("autoprefixer");
 const path = require("path");
 const PugPlugin = require("pug-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const isProduction = process.env.NODE_ENV == "production";
@@ -52,6 +53,7 @@ const config = {
     },
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: ["CNAME"],
     }),
