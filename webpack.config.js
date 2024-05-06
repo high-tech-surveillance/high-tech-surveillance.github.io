@@ -45,7 +45,7 @@ const config = {
       directory: path.join(__dirname, OUTPUT_DIR),
     },
     watchFiles: {
-      paths: ["app/**/*.*"],
+      paths: ["app/**/*.*", "./tailwind.config.js"],
       options: {
         usePolling: true,
       },
