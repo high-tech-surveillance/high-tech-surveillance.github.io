@@ -7,8 +7,8 @@
 @use "font-styles"
 @use "font-face"
 
-//@tailwind base
-//@tailwind components
+@tailwind base
+@tailwind components
 @tailwind utilities
 
 @layer utilities
@@ -16,6 +16,10 @@
     text-transform: lowercase
     &:first-letter
       text-transform: uppercase
+
+@layer components
+  .assistant-35
+    @apply font-assistant firstcase text-35
 
 
 img

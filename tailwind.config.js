@@ -1,31 +1,32 @@
 /** @type {import('tailwindcss').Config} */
-const pug = require("pug");
-
 module.exports = {
   content: {
     files: ["./app/**/*.{html,pug}"],
   },
   theme: {
     colors: {
-      white: "#FFFFFF",
+      black: "#000000",
+      red: {
+        light: "#c11717",
+        dark: "#a50d0d",
+      },
+      blue: {
+        DEFAULT: "#1153a7",
+      },
+    },
+    dropShadow: {
+      md: "4px 4px 4px rgb(0 0 0 / 0.2)",
     },
     fontFamily: {
       assistant: ["Assistant"],
       sanspro: ['"Source Sans Pro"', "sans-serif"],
       barlow: ['"Barlow Condensed"'],
     },
-    //fontSize: {
-    // 18px   16px
-    // 24px   20px
-    // 26px   23px
-    // 35px   24px
-    // 85px   60px
-    //},
     extend: {
       fontSize: {
         35: "35px",
       },
     },
   },
-  corePlugins: ["fontFamily", "fontSize", "fontWeight"],
+  corePlugins: ["fontFamily", "fontSize", "fontWeight", "filter", "dropShadow"],
 };
