@@ -22,11 +22,21 @@ module.exports = {
       sanspro: ['"Source Sans Pro"', "sans-serif"],
       barlow: ['"Barlow Condensed"'],
     },
+    letterSpacing: {
+      wide: "0.26923em",
+    },
     extend: {
       fontSize: {
         35: "35px",
       },
     },
   },
-  corePlugins: ["fontFamily", "fontSize", "fontWeight", "filter", "dropShadow"],
+  corePlugins: [
+    "fontFamily",
+    "fontSize",
+    "fontWeight",
+    "filter",
+    "dropShadow",
+    "letterSpacing",
+  ],
 };
