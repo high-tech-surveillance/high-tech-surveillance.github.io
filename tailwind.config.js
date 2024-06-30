@@ -27,7 +27,17 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        35: "35px",
+        85: "85px", // Cover headline
+        70: "70px", // About us title
+        48: "48px", // About us Services title, Remote surveillance title, Location Heading, bussiness card Heading, Request Heading, Company name
+        40: "40px", // Each location higlight
+        36: "36px", // About us, second title, image footer, phone number, Better yet!
+        35: "35px", // Cover paragraph
+        26: "26px", // Cover second line, Remove survaillance second line
+        24: "24px", // Company name, cover button, Cover paragraph, call to action, Get quote button, quote paragraph, request quote, paragraph
+        18: "18px", // Heading menu item, paragraph small, image legend, quote paragraph small, address
+        14: "14px", // Input label, Form button, input combo
+        11: "11px", // Form legend
       },
     },
   },
