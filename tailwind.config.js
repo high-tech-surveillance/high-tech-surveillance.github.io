@@ -26,6 +26,9 @@ module.exports = {
       wide: "0.26923em",
     },
     extend: {
+      lineHeight: {
+        "leading-tight": "1.2",
+      },
       fontSize: {
         "85px": "85px", // Cover headline
         "70px": "70px", // About us title
@@ -45,6 +48,7 @@ module.exports = {
     "fontFamily",
     "fontSize",
     "fontWeight",
+    "textDecoration",
     "filter",
     "dropShadow",
     "letterSpacing",
