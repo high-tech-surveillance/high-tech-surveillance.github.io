@@ -1,11 +1,11 @@
-include definitions
+include utils/definitions
 - const businessCard = require("/app/business-card.json")
 - const API_KEY = "AIzaSyBs1x53BAlhd_2_PUJCgAkjxT7PTWDhnM8" 
 
 script(src=require("/app/js/form-processor.js"))
 +webpage('contact')
   section#contact-form
-    include _contact-mediums-menu
+    include fragments/_contact-mediums-menu
     div
       h1 Drop us a #[span.hilight-red line!]
       div.row-wrapper

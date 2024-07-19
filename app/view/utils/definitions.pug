@@ -1,12 +1,12 @@
 mixin webpage(pagename)
   doctype html
   html
-    include _head
+    include /app/view/fragments/_head
     body(class= pagename)
-      include _header
+      include /app/view/fragments/_header
 
       div.content
         block
 
     if !isProduction
-      script(src=require('./hmr.js'))
+      script(src=require("/app/js/hmr.js"))
