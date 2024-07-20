@@ -10,19 +10,19 @@ script(src=require("/app/js/form-processor.js"))
         div
           img(src=require("assets/img/building-and-camera.png"))
         div.centered
-          h1.hilight-red.font-40px Each location has it's
-          h1.hilight-blue.font-40px own security needs
-          p.font-24px #[strong Tell us more about your security concerns so we can get started on a plan to address them.]
-          p.font-18px Your time is valuable and we will make sure to get back to you as soon as posible
+          h1.font-sanspro.font-black.text-red.text-40px.uppercase Each location has it's
+          h1.font-sanspro.font-black.text-blue.text-40px.uppercase own security needs
+          p.font-barlow.font-semibold.leading-fit.text-24px #[strong Tell us more about your security concerns so we can get started on a plan to address them.]
+          p.font-assistant.text-18px.font-medium.leading-normal Your time is valuable and we will make sure to get back to you as soon as posible
 
-          a.contact-phone(href=`tel:${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone}]
+          a.font-barlow.text-36px.font-semibold.leading-fit.contact-phone(href=`tel:${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone}]
           button.red-button(onclick="showQuotationForm()") Request a quotation
       div#form-wrapper.hidden
         div
           form#quote-request(action=`${business['form-submit']}`)
-            h1 Request a #[span.hilight-red quotation]
+            h1.font-isanspro.text-white.text-48px.font-black Request a #[span.text-red quotation]
             div.input-identification
-              div.input-wrapper
+              div.font-assistant.text-24px.text-white.font-bold.leading-normal.input-wrapper
                 label(for="name") Name
                 input(id="name", name="name" )
               div.input-wrapper
@@ -36,7 +36,7 @@ script(src=require("/app/js/form-processor.js"))
                 input(id="zip-code", name="zip-code")
               div.select-wrapper
                 label(for="usage") Building usage
-                select(id="usage", name="usage")
+                select.text-black(id="usage", name="usage")
                   option(value="business") Business
                   option(value="residence") Residence
             div.input-building-specs.textarea-wrapper
@@ -46,10 +46,10 @@ script(src=require("/app/js/form-processor.js"))
               label(for="concerns") What are your security concerns
               textarea(id="concerns")
             div.business-contact
-              button.blue-button(onclick="assambleEmail()") Send
+              button.text-white.font-assistant.text-14px.font-bold.leading-normal.blue-button(onclick="assambleEmail()") Send
               div.business-card
                 img.logo(src=require("logo"), style="width: 10rem")
                 div.business-address
-                  h1 HTS
-                  address #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone}
+                  h1.font-sanspro.font-bold.leading-fit.text-48px HTS
+                  address.font-assistant.text-18px.leading-relaxed #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone}
 

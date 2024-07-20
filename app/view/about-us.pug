@@ -3,12 +3,12 @@ include utils/definitions
 +webpage('page-about-us')
   section.first-section.columns.font-assistant.font-18px
     div.column
-      h1.font-source-sans-pro.title About #[span.hilight-red us]
-      p We are dedicated to our clients and their benefit from our strong mission and clear vision.
+      h1.uppercase.font-sanspro.text-70px.font-black About #[span.text-red us]
+      p.font-assistant.text-24px.font-medium.leading-normal We are dedicated to our clients and their benefit from our strong mission and clear vision.
       hr
-      p If you are looking for secure your business, call us today for a comprehensive solution package based on your budget and requirements
+      p.font-assistant.text-18px.leading-snug If you are looking for secure your business, call us today for a comprehensive solution package based on your budget and requirements
       div.centered
-        h2.font-assistant.uppercase.margin-0 Contact us!
+        h2.font-assistant.font-extrabold.leading-normal.uppercase.margin-0 Contact us!
         include fragments/_contact-mediums-menu
     div.column
       img.logo(src=require("@assets/img/logo.svg"))
@@ -17,9 +17,9 @@ include utils/definitions
       div.column.no-height
         img(src=require("@assets/img/by-arno-senoner-from-unsplash.jpg"))
       div.column.align-right
-        h3.font-36px.color-white.barlow-condensed Consultation, installation and service
-        h4.font-source-sans-pro.font-48px.color-blue.uppercase.margin-0 Ask us about
-        ul.font-assistant.font-18px.color-white.margin-0.unbullet
+        h3.text-36px.text-white.font-barlow.font-semibold.leading-fit Consultation, installation and service
+        h4.font-sanspro.text-48px.text-blue.uppercase.leading-fit.margin-0 Ask us about
+        ul.font-assistant.text-18px.text-white.margin-0.unbullet
           li Security assessments
           li Analog & IP cameras
           li Intercom and telephony entry systems
@@ -31,6 +31,6 @@ include utils/definitions
       img.small-stamp(src=require("@assets/img/by-nathy-dog-from-unsplash.jpg"))
       div.footer
         img.width-100px(src=require("@assets/img/logo.svg"))
-        h5.font-barlow.font-36px.capitalize.margin-0 Preventing Harm & Loss
-    p.font-assistant.font-18px We offer full engineering and design services to create a custom business security products and systems. Our highly experiences security expeters are here to help you design and build the solution you need to protect you and your business.
+        h5.font-barlow.text-36px.uppercase.text-white.font-semibold.leading-fit.margin-0 Preventing Harm & Loss
+    p.font-assistant.text-18px.leading-fit We offer full engineering and design services to create a custom business security products and systems. Our highly experiences security expeters are here to help you design and build the solution you need to protect you and your business.
   div.page-footer

@@ -7,14 +7,14 @@ script(src=require("/app/js/form-processor.js"))
   section#contact-form
     include fragments/_contact-mediums-menu
     div
-      h1 Drop us a #[span.hilight-red line!]
+      h1.uppercase.font-sanspro.text-48px.font-black Drop us a #[span.text-red line!]
       div.row-wrapper
         div.centered.left-column
           img(src=require("assets/img/security-camera.png"))
-          h2 #[span.hilight-red Better yet,] see us in person!
-          p.font-24px We love our costumers, so feel free to visit us during normal business hours
-        div
-          form(action=`mailto:${businessCard['form-submit']}`)
+          h2.font-barlow.text-36px.leading-fit.font-semibold.uppercase #[span.text-red Better yet,] see us in person!
+          p.font-assistant.text-24px.leading-normal.font-medium We love our costumers, so feel free to visit us during normal business hours
+        div.font-assistant.text-14px.font-bold.leading-normal.text-white
+          form(action=`${businessCard['form-submit']}`)
             div.input-wrapper
               label(for="name") Name
               input(id="input_name", name="name" type="text")
@@ -31,5 +31,5 @@ script(src=require("/app/js/form-processor.js"))
       div.business-card
         img.logo(style="max-height: 150px;margin-right: 52px" src=require("logo"))
         div.business-identity
-          h1 HTS
-          address.font-18px #{businessCard.address.street_line} #[br] #{businessCard.address.city}, #{businessCard.address.zip_code}, #{businessCard.address.country} #[br] #[a(href=`tel:${businessCard['contact-mediums'].telephone}`)= businessCard['contact-mediums'].telephone]
+          h1.font-sanspro.text-48px.leading-fit.font-bold.text-white HTS
+          address.font-assistant.leading-relaxed.text-18px #{businessCard.address.street_line} #[br] #{businessCard.address.city}, #{businessCard.address.zip_code}, #{businessCard.address.country} #[br] #[a(href=`tel:${businessCard['contact-mediums'].telephone}`)= businessCard['contact-mediums'].telephone]
