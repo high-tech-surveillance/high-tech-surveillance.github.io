@@ -1,7 +1,10 @@
 head
   title High Tech Surveillance
-  link(href=require('@theme') rel='stylesheet') 
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  meta(name="title" content="High Tech Surveillance")
+  meta(name="description" content="Improving remote surveillance with leading edge security technology.")
+  link(href="https://fonts.googleapis.com/" rel="preconnect")
+  //-link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" defer)
+  link(href=require('@theme') rel='stylesheet' defer) 
   link(href=require('@assets/img/logo.svg') rel='icon')
-  link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet")
-  //-link(href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet")
-  script(src=require('@assets/scripts.js'))
+  script(src=require('@assets/scripts.js') async)
