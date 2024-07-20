@@ -38,7 +38,7 @@ module.exports = {
         "40px": "40px", // Each location higlight
         "36px": "36px", // About us, second title, image footer, phone number, Better yet!
         "35px": "35px", // Cover paragraph
-        "26px": ["26px", "7px"], // Cover second line, Remove survaillance second line
+        "26px": ["26px", {letterSpacing: "7px" }], // Cover second line, Remove survaillance second line
         "24px": "24px", // Company name, cover button, Cover paragraph, call to action, Get quote button, quote paragraph, request quote, paragraph
         "18px": "18px", // Heading menu item, paragraph small, image legend, quote paragraph small, address
         "14px": "14px", // Input label, Form button, input combo
