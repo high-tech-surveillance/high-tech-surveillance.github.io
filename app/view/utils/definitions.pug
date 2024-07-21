@@ -1,10 +1,17 @@
+mixin video-wrapper(title, description)
+  div.video-wrapper(class="even:bg-red")
+    block
+    if title
+      p(class="lg:text-40px").font-sanspro.text-25px.font-bold.leading-fit#video-title= title
+    if description
+      p(class="lg:text-24px")#video-caption.font-assistant.text-16px.font-medium.leading-normal(class="lg:text-24px")= description
+
 mixin webpage(pagename)
   doctype html
   html(lang="en-US")
     include /app/view/fragments/_head
     body(class= pagename)
       include /app/view/fragments/_header
-
       div.content
         block
 
