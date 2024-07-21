@@ -10,19 +10,18 @@ script(src=require("/app/js/form-processor.js"))
         div
           img(src=require("assets/img/building-and-camera.png"))
         div.centered
-          h1.font-sanspro.font-black.text-red.text-40px.uppercase Each location has it's
-          h1.font-sanspro.font-black.text-blue.text-40px.uppercase own security needs
-          p.font-barlow.font-semibold.leading-fit.text-24px #[strong Tell us more about your security concerns so we can get started on a plan to address them.]
-          p.font-assistant.text-18px.font-medium.leading-normal Your time is valuable and we will make sure to get back to you as soon as posible
+          h1(class="lg:text-40px").font-sanspro.font-black.text-red.text-25px.uppercase Each location has it's#[br]#[span.text-blue] own security needs
+          p(class="lg:text-24px").font-barlow.font-semibold.leading-fit.text-18px Tell us more about your security concerns so we can get started on a plan to address them.
+          p(class="lg:text-18px").font-assistant.text-16px.font-medium.leading-normal Your time is valuable and we will make sure to get back to you as soon as posible
 
-          a.font-barlow.text-36px.font-semibold.leading-fit.contact-phone(href=`tel:${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone}]
-          button.red-button(onclick="showQuotationForm()") Request a quotation
+          a(class="lg:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`tel:${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone}]
+          button(class="lg:text-24px").text-18px.font-bold.leading-normal.red-button(onclick="showQuotationForm()") Request a quotation
       div#form-wrapper.hidden
         div
+          h1(class="lg:text-48px").font-sanspro.text-35px.font-black.uppercase Request a #[span.text-red quotation]
           form#quote-request(action=`${business['form-submit']}`)
-            h1.font-isanspro.text-white.text-48px.font-black Request a #[span.text-red quotation]
-            div.input-identification
-              div.font-assistant.text-24px.text-white.font-bold.leading-normal.input-wrapper
+            div.input-identification(class="lg:text-14px").font-assistant.text-10px.text-white.font-bold.leading-normal
+              div.input-wrapper
                 label(for="name") Name
                 input(id="name", name="name" )
               div.input-wrapper
@@ -39,17 +38,17 @@ script(src=require("/app/js/form-processor.js"))
                 select.text-black(id="usage", name="usage")
                   option(value="business") Business
                   option(value="residence") Residence
-            div.input-building-specs.textarea-wrapper
+            div.input-building-specs.textarea-wrapper(class="lg:text-14px").font-assistant.text-10px.text-white.font-bold.leading-normal
               label(for="square-footage") Square footage of building and size of surrounding property
               textarea(id="square-footage")
-            div.input-security-concerns.textarea-wrapper
+            div.input-security-concerns.textarea-wrapper(class="lg:text-14px").font-assistant.text-10px.text-white.font-bold.leading-normal
               label(for="concerns") What are your security concerns
               textarea(id="concerns")
             div.business-contact
-              button.text-white.font-assistant.text-14px.font-bold.leading-normal.blue-button(onclick="assambleEmail()") Send
+              button(class="lg:text-14px").text-white.font-assistant.text-10px.font-bold.leading-normal.blue-button(onclick="assambleEmail()") Send
               div.business-card
                 img.logo(src=require("logo"), style="width: 10rem")
                 div.business-address
-                  h1.font-sanspro.font-bold.leading-fit.text-48px HTS
-                  address.font-assistant.text-18px.leading-relaxed #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone}
+                  h1(class="lg:text-48px").font-sanspro.font-bold.leading-fit.text-30px HTS
+                  address(class="lg:text-18px").font-assistant.text-14px.leading-relaxed #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone}
 
