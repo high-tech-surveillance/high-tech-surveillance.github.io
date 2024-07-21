@@ -17,7 +17,7 @@ module.exports = {
       "40px": "40px", // Each location higlight
       "36px": "36px", // About us, second title, image footer, phone number, Better yet!
       "35px": "35px", // Cover paragraph
-      "26px": ["26px", {letterSpacing: "7px" }], // Cover second line, Remove survaillance second line
+      "26px": ["26px", {letterSpacing: "7px" }], // Cover second line, Remote survaillance second line
       "25px": "25px",
       "24px": "24px", // Company name, cover button, Cover paragraph, call to action, Get quote button, quote paragraph, request quote, paragraph
       "23px": "23px",
@@ -29,6 +29,7 @@ module.exports = {
     colors: {
       black: "#000000",
       white:'#FFF',
+      salmon: "#ff7f7f", 
       red: {
         light: "#c11717",
         dark: "#a50d0d",

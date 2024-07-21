@@ -1,24 +1,23 @@
 include utils/definitions
 +webpage('gallery')
-  div.bg-blue-darkest.text-white.text-center
-    div(class="lg:text-60px").font-sanspro.text-35px.uppercase.font-black Remote surveillance
-    div(class="lg:text-36px").font-sanspro.first-column.text-26px.uppercase.font-bold For any situation
-    div.videos
-      +video-wrapper("Surveillance in action on a parking lot", "The whole parking lot area is covered thanks to our CCTV system.")
-        iframe(src="https://www.youtube.com/embed/6aYUIRDQXeQ?si=Sjr0p6wHqm4XUgi5", class="w-full aspect-video" title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", allowfullscreen)
-      +video-wrapper("Police response")
-        video(class="w-full aspect-video" controls src=require("/app/content/gallery/10000000_7163011537144721_1077459981046187489_n.mp4"))
-        //-section#gallery.font-source-sans-pro
-      +video-wrapper()
-        video(class="w-full aspect-video" controls src=require("/app/content/gallery/408973694_7987952814565299_2151639067615700879_n.mp4"))
-      +video-wrapper()
-        video(class="w-full aspect-video" controls src=require("/app/content/gallery/408986732_7944107348952258_6413878186889933558_n.mp4"))
-      +video-wrapper()
-        video(class="w-full aspect-video" controls src=require("/app/content/gallery/429579999_7526408130809124_8248871087670448909_n.mp4"))
-      //-div.centered-content
-  div.flex.flex-col(class="lg:flex-row").items-center.justify-around
-    button(class="w-[160px]").bg-red.text-white.font-assistant.tex-24px.font-bold.uppercase.leading-normal Request a quotation
-    p.font-barlow.font-semibold.text-25px(class="lg:text-36px").leading-fit HTS +1 800 401 5869
-    include fragments/_contact-mediums-menu
+    div.bg-blue-darkest.text-white.text-center
+      div(class="lg:text-60px").font-sanspro.text-35px.uppercase.font-black Remote surveillance
+      div(class="lg:text-36px").font-sanspro.first-column.text-26px.uppercase.font-bold For any situation
+      div.videos
+        +video-wrapper("Surveillance in action on a parking lot", "The whole parking lot area is covered thanks to our CCTV system.")
+          iframe(src="https://www.youtube.com/embed/6aYUIRDQXeQ?si=Sjr0p6wHqm4XUgi5", class="w-full aspect-video" title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", allowfullscreen)
+        +video-wrapper("Police response")
+          video(class="w-full lg:w-4/6 aspect-video" controls src=require("/app/content/gallery/10000000_7163011537144721_1077459981046187489_n.mp4"))
+        +video-wrapper()
+          video(class="w-full lg:w-4/6 aspect-video" controls src=require("/app/content/gallery/408973694_7987952814565299_2151639067615700879_n.mp4"))
+        +video-wrapper()
+          video(class="w-full lg:w-4/6 aspect-video" controls src=require("/app/content/gallery/408986732_7944107348952258_6413878186889933558_n.mp4"))
+        +video-wrapper()
+          video(class="w-full lg:w-4/6 aspect-video" controls src=require("/app/content/gallery/429579999_7526408130809124_8248871087670448909_n.mp4"))
+        //-div.centered-content
+    div.flex.flex-col(class="lg:flex-row").items-center.justify-around
+      button(class="w-[160px]").bg-red.text-white.font-assistant.tex-24px.font-bold.uppercase.leading-normal Request a quotation
+      p.font-barlow.font-semibold.text-25px(class="lg:text-36px").leading-fit HTS +1 800 401 5869
+      include fragments/_contact-mediums-menu
 
 //-script(src=require("showcase-carousel"))
