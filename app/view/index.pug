@@ -1,10 +1,21 @@
 include utils/definitions
 +webpage('index')
-  div.editorial-cover
-    img(src=require("assets/img/by-peter-pivak-from-unsplash.jpg") alt="Surveillance cameras on building corner.")
-    div.editorial-bullet
+  section.relative(class="lg:flex lg:flex-row").mx-auto.items-center
+    //-.flex.flex-col(class="lg:flex-row")
+    div(class="lg:w-1/2")
+      img(src=require("assets/img/by-peter-pivak-from-unsplash.jpg") alt="Surveillance cameras on building corner.").w-full.h-auto(class="lg:h-full").object-cover.opacity-45(class="lg:opacity-100").block
+    div(class="lg:relative lg:w-1/2").absolute.text-center.inset-0.content-center
       p(class="lg:text-85px").font-sanspro.text-60px.uppercase.drop-shadow-md Your #[span.text-red.light eyes] #[br] and #[span.text-blue ears]
       p(class="lg:text-26px").font-sanspro.text-20px.uppercase.font-bold while you are away
       hr
       p("lg:text-35px").leading-fit.font-assistant.text-23px Let us #[span.font-semibold build] and #[span.font-semibold maintain] #[br] #[span.text-red-dark.font-extrabold Your security]
       a.font-assistant.uppercase.color-white.text-24px.leading-normal.text-bold.bg-blue.blue-button Get a quote
+
+    //-div
+      //-img(src=require("assets/img/by-peter-pivak-from-unsplash.jpg") alt="Surveillance cameras on building corner.")
+      //-div
+        //-p(class="lg:text-85px").font-sanspro.text-60px.uppercase.drop-shadow-md Your #[span.text-red.light eyes] #[br] and #[span.text-blue ears]
+        //-p(class="lg:text-26px").font-sanspro.text-20px.uppercase.font-bold while you are away
+        //-hr
+        //-p("lg:text-35px").leading-fit.font-assistant.text-23px Let us #[span.font-semibold build] and #[span.font-semibold maintain] #[br] #[span.text-red-dark.font-extrabold Your security]
+        //-a.font-assistant.uppercase.color-white.text-24px.leading-normal.text-bold.bg-blue.blue-button Get a quote
