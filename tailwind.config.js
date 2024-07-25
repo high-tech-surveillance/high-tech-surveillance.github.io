@@ -45,6 +45,11 @@ module.exports = {
       md: "4px 4px 4px rgb(0 0 0 / 0.2)",
     },
     extend: {
+      width: {
+        "40px": "40px",
+        "60px": "60px",
+        "350px": "350px",
+      },
       lineHeight: {
         "tight": "1.1em",
         "fit": "1.2em",

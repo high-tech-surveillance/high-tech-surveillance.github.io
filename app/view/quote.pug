@@ -47,7 +47,7 @@ script(src=require("/app/js/form-processor.js"))
             div.business-contact
               button(class="lg:text-14px").text-white.font-assistant.text-10px.font-bold.leading-normal.blue-button(onclick="assambleEmail()") Send
               div.business-card
-                img.logo(src=require("logo"), style="width: 10rem")
+                img.logo(src=require("logo") class="w-[80px] lg:w-[111px]")
                 div.business-address
                   h1(class="lg:text-48px").font-sanspro.font-bold.leading-fit.text-30px HTS
                   address(class="lg:text-18px").font-assistant.text-14px.leading-relaxed #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone}

@@ -31,7 +31,7 @@ script(src=require("/app/js/form-processor.js"))
     iframe(width="100%", height="300",  style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(businessCard.address.street_line)},${businessCard.address.zip_code},${encodeURIComponent(businessCard.address.city)}`)
     div.address-footer
       div.business-card
-        img.logo(style="max-height: 150px;margin-right: 52px" src=require("logo"))
+        img.logo(src=require("logo") class="w-[100px] lg:w-[150px]" )
         div.business-identity
           h1(class="lg:text-48px").font-sanspro.text-35px.leading-fit.font-bold.text-white HTS
           address(class="lg:text-18px lg:leading-fit").font-assistant.leading-relaxed.text-14px #{businessCard.address.street_line} #[br] #{businessCard.address.city}, #{businessCard.address.zip_code}, #{businessCard.address.country} #[br] #[a(href=`tel:${businessCard['contact-mediums'].telephone}`)= businessCard['contact-mediums'].telephone]
