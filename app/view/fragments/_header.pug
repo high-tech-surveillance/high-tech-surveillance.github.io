@@ -8,13 +8,13 @@ header
     span.business-presentation
       img.logo(src=require("logo") class="lg:w-60px").w-40px
       h4.font-sanspro.font-bold.text-16px.uppercase(class="lg:text-24px")= business.name
-    menu
-      nav(class="hidden lg:block")
-        each menuitem of ([['Home', "/"],['About us', '/about-us.html'], ['Gallery', '/gallery.html'], ['Quote', '/quote.html'], ['Contact us', '/contact.html'] ])
-          menuitem
-            +menu-entry(menuitem[0], menuitem[1])
+    menu(class="group")
       menuitem(class="lg:hidden")
         input#nav-checkbox(type="checkbox").hidden
         label(for="nav-checkbox")
-          img(src=require("assets/img/bars.svg") class="w-[18px]")
+          img(src=require("assets/img/bars.svg") class="w-[18px] h-[14px]")
+      nav(class="hidden lg:block group-has-[input:checked]:flex group-has-[input:checked]:flex-col")
+        each menuitem of ([['Home', "/"],['About us', '/about-us.html'], ['Gallery', '/gallery.html'], ['Quote', '/quote.html'], ['Contact us', '/contact.html'] ])
+          menuitem
+            +menu-entry(menuitem[0], menuitem[1])
   hr
