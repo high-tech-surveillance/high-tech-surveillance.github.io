@@ -27,6 +27,7 @@ module.exports = {
       "11px": "11px", // Form legend
     },
     colors: {
+      transparent: 'transparent',
       black: "#000000",
       white:'#FFF',
       salmon: "#ff7f7f", 
