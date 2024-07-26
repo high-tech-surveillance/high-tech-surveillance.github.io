@@ -40,6 +40,7 @@ module.exports = {
         DEFAULT: "#1153a7",
         dark: "#051965",
         darkest: "#13151E",
+        pale: "#2A3044",
       },
     },
     dropShadow: {

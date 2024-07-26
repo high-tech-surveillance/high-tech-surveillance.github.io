@@ -14,6 +14,7 @@ mixin webpage(pagename)
       include /app/view/fragments/_header
       div.content
         block
+      include /app/view/fragments/_footer
 
     if !isProduction
       script(src=require("/app/js/hmr.js"))
