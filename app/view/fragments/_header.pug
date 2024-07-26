@@ -1,12 +1,12 @@
 - const business = require("/app/business-card.json")
 
 mixin menu-entry(title, link)
-  a.font-assistant.text-14px.font-medium.text-black.no-underline.uppercase(href=`${link}` class="lg:text-18px")= title
+  a.font-assistant.text-14px.font-medium.text-black.no-underline.uppercase(href=`${link}` class="lg:text-18px mx-[12px]")= title
 
 header
-  div.wrapper
+  div.wrapper(class="items-center")
     span.business-presentation
-      img.logo(src=require("logo") class="lg:w-60px").w-40px
+      img.logo(src=require("logo") class="lg:w-60px my-[12px] mx-[24px]").w-40px
       h4.font-sanspro.font-bold.text-16px.uppercase(class="lg:text-24px")= business.name
     menu(class="group")
       menuitem(class="lg:hidden")
