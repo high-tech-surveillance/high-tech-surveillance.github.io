@@ -12,8 +12,7 @@ mixin webpage(pagename)
     include /app/view/fragments/_head
     body(class= pagename).flex.flex-col.min-h-screen
       include /app/view/fragments/_header
-      div.container.grow
-        block
+      block
       include /app/view/fragments/_footer
 
     if !isProduction
