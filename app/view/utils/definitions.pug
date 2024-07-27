@@ -12,7 +12,7 @@ mixin webpage(pagename)
     include /app/view/fragments/_head
     body(class= pagename)
       include /app/view/fragments/_header
-      div.content
+      div.container
         block
       include /app/view/fragments/_footer
 

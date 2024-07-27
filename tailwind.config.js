@@ -4,6 +4,9 @@ module.exports = {
     files: ["./app/**/*.{html,pug}"],
   },
   theme: {
+    container: {
+      center: true,
+    },
     fontFamily: {
       assistant: ["Assistant"],
       sanspro: ['"Source Sans Pro"', "sans-serif"],

@@ -1,11 +1,11 @@
 - const business = require("/app/business-card.json")
 
 mixin menu-entry(title, link)
-  a.font-assistant.text-14px.font-medium.text-black.no-underline.uppercase(href=`${link}` class="lg:text-18px mx-[12px]")= title
+  a.font-assistant.text-14px.font-medium.text-black.no-underline.uppercase(href=`${link}` class="lg:text-18px mx-[25px]")= title
 
 header
-  div.wrapper(class="items-center")
-    span.business-presentation
+  div.container.flex.flex-row.items-center.justify-between
+    span.business-presentation.flex.flex-row.items-center
       img.logo(src=require("logo") class="lg:w-60px my-[12px] mx-[24px]").w-40px
       h4.font-sanspro.font-bold.text-16px.uppercase(class="lg:text-24px")= business.name
     menu(class="group")
@@ -13,7 +13,7 @@ header
         input#nav-checkbox(type="checkbox").hidden
         label(for="nav-checkbox")
           img(src=require("assets/img/bars.svg") class="w-[18px] h-[14px]")
-      nav(class="hidden lg:block group-has-[input:checked]:flex group-has-[input:checked]:flex-col")
+      nav(class="hidden lg:block bg-white/80 group-has-[input:checked]:flex group-has-[input:checked]:flex-col").absolute.right-0.z-10
         each menuitem of ([['Home', "/"],['About us', '/about-us.html'], ['Gallery', '/gallery.html'], ['Quote', '/quote.html'], ['Contact us', '/contact.html'] ])
           menuitem
             +menu-entry(menuitem[0], menuitem[1])
