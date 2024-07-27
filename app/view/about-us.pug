@@ -1,8 +1,8 @@
 include utils/definitions
 
 +webpage('page-about-us')
-  section.first-section.columns.font-assistant.font-18px
-    div.column
+  section.first-section.font-assistant.font-18px.flex.flex-row
+    div(class="w-[1/2]")
       h1.uppercase.font-sanspro.text-30px(class="lg:text-70px").font-black About #[span.text-red us]
       p.font-assistant.text-18px(class="lg:text-24px").font-medium.leading-normal We are dedicated to our clients and their benefit from our strong mission and clear vision.
       hr
@@ -10,7 +10,7 @@ include utils/definitions
       div.centered
         h2.font-assistant.font-extrabold.leading-normal.uppercase.text-24px.margin-0 Contact us!
         include fragments/_contact-mediums-menu
-    div.column
+    div(class="w-[1/2]")
       img.logo(src=require("@assets/img/logo.svg") class="w-[90px] lg:w-350px")
   section.second-section
     div.wrapper.columns
