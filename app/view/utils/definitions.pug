@@ -10,9 +10,9 @@ mixin webpage(pagename)
   doctype html
   html(lang="en-US")
     include /app/view/fragments/_head
-    body(class= pagename)
+    body(class= pagename).flex.flex-col.min-h-screen
       include /app/view/fragments/_header
-      div.container
+      div.container.grow
         block
       include /app/view/fragments/_footer
 
