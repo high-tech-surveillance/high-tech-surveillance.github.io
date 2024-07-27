@@ -20,7 +20,7 @@ module.exports = {
       "40px": "40px", // Each location higlight
       "36px": "36px", // About us, second title, image footer, phone number, Better yet!
       "35px": "35px", // Cover paragraph
-      "26px": ["26px", {letterSpacing: "7px" }], // Cover second line, Remote survaillance second line
+      "26px": ["26px", { letterSpacing: "7px" }], // Cover second line, Remote survaillance second line
       "25px": "25px",
       "24px": "24px", // Company name, cover button, Cover paragraph, call to action, Get quote button, quote paragraph, request quote, paragraph
       "23px": "23px",
@@ -30,15 +30,20 @@ module.exports = {
       "11px": "11px", // Form legend
     },
     colors: {
-      transparent: 'transparent',
+      transparent: "transparent",
       black: "#000000",
-      white:'#FFF',
-      salmon: "#ff7f7f", 
-      gray: "#B1B2B5",
+      white: "#FFF",
+      salmon: "#ff7f7f",
+      gray: {
+        dark: "#111111",
+        DEFAULT: "#B1B2B5",
+      },
       red: {
         light: "#c11717",
         dark: "#a50d0d",
-        get DEFAULT(){ return this.light;}
+        get DEFAULT() {
+          return this.light;
+        },
       },
       blue: {
         DEFAULT: "#1153a7",
@@ -57,14 +62,14 @@ module.exports = {
         "350px": "350px",
       },
       lineHeight: {
-        "tight": "1.1em",
-        "fit": "1.2em",
-        "snug": "1.4em",
-        "relaxed": "1.6em",
+        tight: "1.1em",
+        fit: "1.2em",
+        snug: "1.4em",
+        relaxed: "1.6em",
       },
     },
   },
   corePlugins: {
     preflight: false,
-  }
+  },
 };

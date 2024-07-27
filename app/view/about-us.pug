@@ -1,11 +1,11 @@
 include utils/definitions
 
 +webpage('page-about-us')
-  section.font-assistant.font-18px.flex.flex-row(class="ml-[69px] border-0 lg:border-l-[40px] lg:border-red lg:border-solid lg:p-10")
-    div(class="w-[1/2]")
+  section.font-assistant.font-18px.flex.flex-row(class="lg:ml-[69px] border-0 lg:border-l-[40px] lg:border-red lg:border-solid p-[30px_50px_55px_45px] lg:p-[150px_200px_140px_100px]").justify-between
+    div(class="w-[1/2] lg:max-w-[380px]")
       h1.uppercase.font-sanspro.text-30px(class="lg:text-70px").font-black About #[span.text-red us]
       p.font-assistant.text-18px(class="lg:text-24px").font-medium.leading-normal We are dedicated to our clients and their benefit from our strong mission and clear vision.
-      hr
+      hr(class="border-solid border-y-[3px]").border-gray.opacity-45
       p.font-assistant.text-16px(class="lg:text-18px").leading-snug If you are looking to secure your business, call us today for a comprehensive solution package based on your budget and requirements
       div.centered
         h2.font-assistant.font-extrabold.leading-normal.uppercase.text-24px.margin-0 Contact us!
