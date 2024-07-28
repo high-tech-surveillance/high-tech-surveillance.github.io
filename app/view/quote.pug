@@ -14,7 +14,7 @@ script(src=require("/app/js/form-processor.js"))
           p(class="lg:text-24px").font-barlow.font-semibold.leading-fit.text-18px Tell us more about your security concerns so we can get started on a plan to address them.
           p(class="lg:text-18px").font-assistant.text-16px.font-medium.leading-normal Your time is valuable and we will make sure to get back to you as soon as posible
 
-          a(class="lg:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone}]
+          a(class="lg:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone.replace(/^tel:\/\//, "")}]
           button(class="lg:text-24px").text-18px.font-bold.leading-normal.red-button(onclick="showQuotationForm()") Request a quotation
       div#form-wrapper.hidden
         div
