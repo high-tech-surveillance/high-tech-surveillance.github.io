@@ -36,7 +36,10 @@ module.exports = {
       salmon: "#ff7f7f",
       gray: {
         dark: "#111111",
-        DEFAULT: "#B1B2B5",
+        ligth: "#B1B2B5",
+        get DEFAULT() {
+          return this.light;
+        },
       },
       red: {
         light: "#c11717",
