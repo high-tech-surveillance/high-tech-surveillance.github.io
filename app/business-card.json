@@ -1,6 +1,6 @@
 {
-  "name":"High Tech Surveillance",
-  "form-submit": "mailto:automataprocesadordedatos+securityhts@gmail.com",
+  "name": "High Tech Surveillance",
+  "form-submit": "mailto:sales@securityhts.com",
   "address": {
     "street_line": "1115 Kansas Avenue",
     "city": "Modesto",
@@ -8,12 +8,12 @@
     "zip_code": 95351,
     "country": "United States"
   },
-  "contact-mediums":{
-    "telephone":"+18559066435",
-    "whatsapp":"",
-    "facebook":"",
-    "tiktok":"",
-    "youtube":"",
+  "contact-mediums": {
+    "telephone": "phone://+18559066435",
+    "whatsapp": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": "",
     "instagram": "https://www.instagram.com/htssecurity24/"
   }
 }
