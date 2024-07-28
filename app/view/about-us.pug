@@ -1,37 +1,40 @@
 include utils/definitions
 
 +webpage('page-about-us')
-  section.font-assistant.font-18px.flex.flex-row(class="lg:ml-[69px] border-0 lg:border-l-[40px] lg:border-red lg:border-solid p-[30px_50px_55px_45px] lg:p-[150px_200px_140px_100px]").justify-between
-    div(class="w-[1/2] lg:max-w-[380px]")
-      h1.uppercase.font-sanspro.text-30px(class="lg:text-70px").font-black About #[span.text-red us]
-      p.font-assistant.text-18px(class="lg:text-24px").font-medium.leading-normal We are dedicated to our clients and their benefit from our strong mission and clear vision.
-      hr(class="border-solid border-y-[3px]").border-gray.opacity-45
-      p.font-assistant.text-16px(class="lg:text-18px").leading-snug If you are looking to secure your business, call us today for a comprehensive solution package based on your budget and requirements
-      div.centered
-        h2.font-assistant.font-extrabold.leading-normal.uppercase.text-24px(class="mt-[53px] mb-[15px] lg:mb-[20px] lg:mt-[55px]") Contact us!
-        include fragments/_contact-mediums-menu
-    div(class="w-[1/2]")
-      img.logo(src=require("@assets/img/logo.svg") class="w-[90px] lg:w-350px")
-  section.second-section
-    div.wrapper.columns
-      div.column.no-height
-        img(src=require("@assets/img/by-arno-senoner-from-unsplash.jpg"))
-      div.column.align-right
-        h3.text-25px(class="lg:text-36px").text-white.font-barlow.font-semibold.leading-fit Consultation, installation and service
-        h4.font-sanspro.text-36px(class="lg:48px").text-salmon.uppercase.leading-fit.margin-0 Ask us #[span.text-white about]
-        ul.font-assistant.text-18px.text-white.margin-0.unbullet
-          li Security assessments
-          li Analog & IP cameras
-          li Intercom and telephony entry systems
-          li Electrified gate operators
-          li Automated pedestrian door operators
-          li Intrusion systems
-  section.third-section
-    div.overlay
-      img.small-stamp(src=require("@assets/img/by-nathy-dog-from-unsplash.jpg"))
-      div.footer
-        img(src=require("@assets/img/logo.svg") class="w-[100px]")
-        h5.font-barlow.text-24px(class="lg:text-36px").uppercase.text-white.font-semibold.leading-fit.margin-0 Preventing Harm & Loss
-    p.font-assistant.text-14px(class="lg:text-18px").leading-fit We offer full engineering and design services to create a custom business security products and systems. Our highly experiences security expeters are here to help you design and build the solution you need to protect you and your business.
-  div.page-footer.text-center
-    button.font-assistant.text-24px.font-bold.leading-normal.uppercase.bg-blue.text-white Get quote
+  div
+    section.font-assistant.font-18px.flex.flex-row(class="lg:ml-[69px] border-0 lg:border-l-[40px] lg:border-red lg:border-solid p-[30px_50px_55px_45px] lg:p-[150px_200px_140px_100px]").justify-between
+      div(class="w-[1/2] lg:max-w-[380px]")
+        h1.uppercase.font-sanspro.text-30px(class="lg:text-70px").font-black About #[span.text-red us]
+        p.font-assistant.text-18px(class="lg:text-24px").font-medium.leading-normal We are dedicated to our clients and their benefit from our strong mission and clear vision.
+        hr(class="border-solid border-y-[3px]").border-gray.opacity-45
+        p.font-assistant.text-16px(class="lg:text-18px").leading-snug If you are looking to secure your business, call us today for a comprehensive solution package based on your budget and requirements
+        div.centered
+          h2.font-assistant.font-extrabold.leading-normal.uppercase.text-24px(class="mt-[53px] mb-[15px] lg:mb-[20px] lg:mt-[55px]") Contact us!
+          include fragments/_contact-mediums-menu
+      div(class="w-[1/2]")
+        img.logo(src=require("@assets/img/logo.svg") class="w-[90px] lg:w-350px")
+  div.second-section
+    section
+      div.wrapper.columns
+        div.column.no-height
+          img(src=require("@assets/img/by-arno-senoner-from-unsplash.jpg"))
+        div.column
+          h3.text-25px(class="lg:text-36px").text-white.font-barlow.font-semibold.leading-fit Consultation, installation and service
+          h4.font-sanspro.text-36px(class="lg:48px").text-salmon.uppercase.leading-fit.margin-0 Ask us #[span.text-white about]
+          ul.font-assistant.text-18px.text-white.margin-0.unbullet.p-0
+            li Security assessments
+            li Analog & IP cameras
+            li Intercom and telephony entry systems
+            li Electrified gate operators
+            li Automated pedestrian door operators
+            li Intrusion systems
+  div.third-section
+    section
+      div.overlay
+        img.small-stamp(src=require("@assets/img/by-nathy-dog-from-unsplash.jpg"))
+        div.footer
+          img(src=require("@assets/img/logo.svg") class="w-[100px]")
+          h5.font-barlow.text-24px(class="lg:text-36px").uppercase.text-white.font-semibold.leading-fit.margin-0 Preventing Harm & Loss
+      p.font-assistant.text-14px(class="lg:text-18px").leading-fit We offer full engineering and design services to create a custom business security products and systems. Our highly experiences security expeters are here to help you design and build the solution you need to protect you and your business.
+    div.page-footer.text-center
+      button.font-assistant.text-24px.font-bold.leading-normal.uppercase.bg-blue.text-white Get quote
