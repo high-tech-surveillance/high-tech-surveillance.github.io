@@ -2,10 +2,10 @@ include utils/definitions
 
 +webpage('page-about-us')
   div(class="p-[30px_50px_55px_45px]").font-assistant.font-18px.flex.flex-row(class="lg:ml-[69px] border-0 lg:border-l-[40px] lg:border-red lg:border-solid lg:p-[150px_200px_140px_100px]").justify-between
-    section
-      h1.uppercase.font-sanspro(class="text-[30px] lg:text-[70px]").font-black About #[span.text-red us]
-      img.logo(src=require("@assets/img/logo.svg") class="w-[90px] lg:w-350px")
-      div
+    section(class="grid grid-cols-2")
+      h1.uppercase.font-sanspro(class="text-[30px] lg:text-[70px] self-end lg:self-baseline").font-black About #[span.text-red us]
+      img.logo(src=require("@assets/img/logo.svg") class="w-[90px] lg:w-350px lg:row-span-3 lg:col-start-2 lg:self-center justify-self-end m-[1.5em] lg:mb-0")
+      div(class="col-span-full lg:col-auto")
         p.font-assistant.text-18px(class="lg:text-24px").font-medium.leading-normal We are dedicated to our clients and their benefit from our strong mission and clear vision.
         hr(class="border-solid border-y-[3px] border-gray-dark/45 m-[30px_0_15px_0]")
         p.font-assistant.text-16px(class="lg:text-18px").leading-snug If you are looking to secure your business, call us today for a comprehensive solution package based on your budget and requirements
@@ -14,12 +14,10 @@ include utils/definitions
           include fragments/_contact-mediums-menu
   div.bg-blue-pale(class="p-[60px_40px_80px_40px] lg:p-[0px_40px_0px_40px]")
     section.container.text-center
-      div
-        div
-          h3.text-25px(class="lg:text-36px").text-white.font-barlow.font-semibold.leading-fit Consultation, installation and service
-        div(class="m-[20px_22px_30px_22px]")
-          img(src=require("@assets/img/by-arno-senoner-from-unsplash.jpg"))
-        div  
+      div.grid(class="lg:grid-cols-[50%_360px]")(class="lg:text-right")
+        h3.text-25px(class="lg:text-36px lg:col-start-2 lg:self-center").text-white.font-barlow.font-semibold.leading-fit Consultation, installation and service
+        img(src=require("@assets/img/by-arno-senoner-from-unsplash.jpg"))(class="m-[20px_auto_30px_auto] lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:my-0")
+        div(class="lg:col-start-2") 
           h4.font-sanspro.text-36px(class="lg:48px").text-salmon.uppercase.leading-fit.margin-0 Ask us #[span.text-white about]
           ul.font-assistant.text-18px.text-white.leading-relaxed(class="mt-[20px]")
             li Security assessments
