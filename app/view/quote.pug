@@ -5,8 +5,8 @@ script(src=require("/app/js/form-processor.js"))
 +webpage('quote')
   section#request-quote
     include fragments/_contact-mediums-menu
-    div.mono-display
-      div#request-quote-invite.row-wrapper
+    div.mono-display.group
+      div#request-quote-invite.row-wrapper(class="group-has-[#show-request-quote-form:checked]:hidden")
         div
           img(src=require("assets/img/building-and-camera.png"))
         div.centered
@@ -15,8 +15,10 @@ script(src=require("/app/js/form-processor.js"))
           p(class="lg:text-18px").font-assistant.text-16px.font-medium.leading-normal Your time is valuable and we will make sure to get back to you as soon as posible
 
           a(class="lg:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone.replace(/^tel:\/\//, "")}]
-          button(class="lg:text-24px").text-18px.font-bold.leading-normal.red-button(onclick="showQuotationForm()") Request a quotation
-      div#form-wrapper.hidden
+          input#show-request-quote-form(type="checkbox").hidden
+          button(class="lg:text-24px").text-18px.font-bold.leading-normal.red-button
+            label(for="show-request-quote-form") Request a quotation
+      div#form-wrapper.hidden(class="group-has-[#show-request-quote-form:checked]:block")
         div
           h1(class="lg:text-48px").font-sanspro.text-35px.font-black.uppercase Request a #[span.text-red quotation]
           form#quote-request(action=`${business['form-submit']}`)
