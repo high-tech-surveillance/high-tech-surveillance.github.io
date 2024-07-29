@@ -2,7 +2,7 @@
 
 mixin contact-link(medium, address)
   a(href=address)
-    img(src=require('assets/img/contact-mediums/icon-' + medium + '.svg'))
+    img(src=require('assets/img/contact-mediums/icon-' + medium + '.svg')).inline
 
 nav.contact-mediums
   each address, channel in businessCard['contact-mediums']
