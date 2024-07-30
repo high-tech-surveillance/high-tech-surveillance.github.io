@@ -55,6 +55,13 @@ module.exports = {
         pale: "#2A3044",
       },
     },
+    borderRadius: {
+      DEFAULT: "15px",
+    },
+    boxShadow: {
+      sm: "0 0px 5px 2px rgba(0, 0, 0, 0.3)",
+      bg: "7px 7px 5px 2px rgba(0, 0, 0, 0.3)",
+    },
     dropShadow: {
       md: "4px 4px 4px rgb(0 0 0 / 0.2)",
     },

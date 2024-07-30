@@ -15,13 +15,12 @@ script(src=require("/app/js/form-processor.js"))
       div(class="lg:col-start-2 text-center self-center")
         a(class="lg:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone.replace(/^tel:\/\//, "")}]
         input#show-request-quote-form(type="checkbox").hidden
-        button(class="lg:text-24px").text-18px.font-bold.leading-normal.red-button.p-0
-          label(for="show-request-quote-form").block Request a quotation
+        label(for="show-request-quote-form")(class="lg:text-24px hover:cursor-pointer hover:shadow-sm max-w-[230px] p-[15_5_15_5]").rounded.inline-block.text-white.bg-red.text-18px.font-bold.leading-normal.shadow-bg Request a quotation
     div#form-wrapper.hidden(class="group-has-[#show-request-quote-form:checked]:block")
       div
         h1(class="lg:text-48px").font-sanspro.text-35px.font-black.uppercase Request a #[span.text-red quotation]
         form#quote-request(action=`${business['form-submit']}`)
-          div.input-identification(class="lg:text-14px").font-assistant.text-10px.text-white.font-bold.leading-normal
+          div.input-identification(class="lg:text-14px").font-assistant.text-10px.text-ehite.font-bold.leading-normal
             div.input-wrapper
               label(for="name") Name
               input(id="name", name="name" )
