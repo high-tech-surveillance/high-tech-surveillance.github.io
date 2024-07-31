@@ -37,6 +37,8 @@ module.exports = {
       gray: {
         dark: "#111111",
         light: "#B1B2B5",
+        50: "#D4D4D4",
+        70: "#727376",
         get DEFAULT() {
           return this.light;
         },
@@ -56,11 +58,13 @@ module.exports = {
       },
     },
     borderRadius: {
+      sm: "5px",
       DEFAULT: "15px",
     },
     boxShadow: {
       sm: "0 0px 5px 2px rgba(0, 0, 0, 0.3)",
       bg: "7px 7px 5px 2px rgba(0, 0, 0, 0.3)",
+      DEFAULT: "7px 7px 4px 0px rgba(0, 0, 0, 0.4)",
     },
     dropShadow: {
       md: "4px 4px 4px rgb(0 0 0 / 0.2)",
