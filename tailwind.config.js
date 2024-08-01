@@ -28,6 +28,7 @@ module.exports = {
       "18px": "18px", // Heading menu item, paragraph small, image legend, quote paragraph small, address
       "14px": "14px", // Input label, Form button, input combo
       "11px": "11px", // Form legend
+      "10px": "10px", // Form legend
     },
     colors: {
       transparent: "transparent",
