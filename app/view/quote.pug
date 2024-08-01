@@ -10,7 +10,7 @@ script(src=require("/app/js/form-processor.js"))
   section.mx-auto.container.group
     div.text-right
       include fragments/_contact-mediums-menu
-    div(class="group-has-[#show-request-quote-form:checked]:hidden lg:grid lg:grid-cols-2 lg:hidden")
+    div(class="group-has-[#show-request-quote-form:checked]:hidden lg:grid lg:grid-cols-2")
       div.text-center(class="lg:col-start-2 self-center")
         h1(class="lg:text-40px").font-sanspro.font-black.text-red.text-25px.uppercase Each location has it's#[br]#[span.text-blue own security needs]
         p(class="lg:text-24px lg:max-w-[384px]").mx-auto.font-barlow.font-semibold.leading-fit.text-18px.text-justify Tell us more about your security concerns so we can get started on a plan to address them
@@ -20,7 +20,7 @@ script(src=require("/app/js/form-processor.js"))
         a(class="lg:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone.replace(/^tel:\/\//, "")}]
         input#show-request-quote-form(type="checkbox").hidden
         label(for="show-request-quote-form")(class="lg:text-24px hover:cursor-pointer hover:shadow-sm max-w-[230px] p-[15_5_15_5]").rounded.inline-block.text-white.bg-red.text-18px.font-bold.leading-normal.shadow-bg Request a quotation
-    div(class="max-w-[900px] mx-[60px]").mx-auto.hiden(class="group-has-[#show-request-quote-form:checked]:block")
+    div(class="max-w-[900px] mx-[60px]").mx-auto.hidden(class="group-has-[#show-request-quote-form:checked]:block")
       h1.text-center(class="lg:text-48px").font-sanspro.text-35px.font-black.uppercase Request a #[span.text-red quotation]
       form(action=`${business['form-submit']}`)
         div(class="lg:text-14px").font-assistant.text-10px.text-white.font-bold.leading-normal
