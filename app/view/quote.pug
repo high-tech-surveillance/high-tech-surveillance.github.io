@@ -1,8 +1,8 @@
 - const business = require("/app/business-card.json");
 mixin labeled_input(field, colour)
   div.shadow.bg-gray-50.flex.rounded-sm(class="mt-[15px]")
-    label(class="min-w-[53px]").text-center.rounded-sm.uppercase.round-r-sm.bg-gray-70(for=field.toLowerCase())= field
-    input.width-full.bg-gray-50.grow.rounded-r-sm(id=field.toLowerCase().replace(" ", "-"), name=field.toLowerCase() )
+    label(class="min-w-[53px] flex justify-center items-center").text-center.rounded-sm.uppercase.round-r-sm.bg-gray-70(for=field.toLowerCase())= field
+    input.width-full.bg-gray-50.grow.rounded-r-sm(class="h-[30px]" id=field.toLowerCase().replace(" ", "-"), name=field.toLowerCase() )
 
 include utils/definitions
 script(src=require("/app/js/form-processor.js"))

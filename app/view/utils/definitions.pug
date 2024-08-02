@@ -4,7 +4,7 @@ mixin video-wrapper(title, description)
     if title
       p(class="lg:text-40px").font-sanspro.text-25px.font-bold.leading-fit= title
     if description
-      p(class="lg:text-24px").font-assistant.text-16px.font-medium.leading-normal(class="lg:text-24px")= description
+      p(class="lg:text-24px lg:text-24px").font-assistant.text-16px.font-medium.leading-normal= description
 
 mixin webpage(pagename)
   doctype html

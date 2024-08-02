@@ -3,7 +3,7 @@ include utils/definitions
   div.container.grow.content-center.content-center
     section.relative(class="lg:flex lg:flex-row").mx-auto.items-center
       div(class="lg:w-1/2")
-        img(class="max-h-[500px]")(src=require("assets/img/by-peter-pivak-from-unsplash.jpg") alt="Surveillance cameras on building corner.").w-full.h-auto(class="lg:h-full").object-cover.opacity-45(class="lg:opacity-100").block
+        img(class="max-h-[500px] lg:opacity-100 lg:h-full" src=require("assets/img/by-peter-pivak-from-unsplash.jpg") alt="Surveillance cameras on building corner.").w-full.h-auto.object-cover.opacity-45.block
       div(class="lg:relative lg:w-1/2").absolute.text-center.inset-0.content-center.max-w-fit.mx-auto
         p(class="lg:text-85px").font-sanspro.text-60px.uppercase.drop-shadow-md Your #[span.text-red.light eyes] #[br] and #[span.text-blue ears]
         p(class="lg:text-26px").font-sanspro.text-20px.uppercase.font-bold while you are away
