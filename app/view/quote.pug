@@ -1,8 +1,8 @@
 - const business = require("/app/business-card.json");
 mixin labeled_input(field, colour)
-  div.shadow.bg-gray-50.flex.rounded-sm(class="mt-[15px]")
-    label(class="min-w-[53px] flex justify-center items-center").text-center.rounded-sm.uppercase.round-r-sm.bg-gray-70(for=field.toLowerCase())= field
-    input.width-full.bg-gray-50.grow.rounded-r-sm(class="h-[30px]" id=field.toLowerCase().replace(" ", "-"), name=field.toLowerCase() )
+  div.shadow.bg-gray-50.flex.rounded-sm(class="mt-[15px] lg:even:mb-[20px]")
+    label(class="min-w-[53px] flex lg:w-[80px] lg:text-14px justify-center items-center").text-center.rounded-sm.uppercase.round-r-sm.bg-gray-70(for=field.toLowerCase())= field
+    input.width-full.bg-gray-50.grow.rounded-r-sm(class="lg:h-[30px] h-[20px]" id=field.toLowerCase().replace(" ", "-"), name=field.toLowerCase() )
 
 include utils/definitions
 script(src=require("/app/js/form-processor.js"))
@@ -23,7 +23,7 @@ script(src=require("/app/js/form-processor.js"))
     div(class="max-w-[900px] mx-[60px]").mx-auto.hidden(class="group-has-[#show-request-quote-form:checked]:block")
       h1.text-center(class="lg:text-48px").font-sanspro.text-35px.font-black.uppercase Request a #[span.text-red quotation]
       form(action=`${business['form-submit']}`)
-        div(class="lg:text-14px").font-assistant.text-10px.text-white.font-bold.leading-normal
+        div(class="text-10px lg:text-14px").font-assistant.text-white.font-bold.leading-normal
           +labeled_input("Name")
           +labeled_input("Email")
           +labeled_input("Phone")
@@ -34,10 +34,10 @@ script(src=require("/app/js/form-processor.js"))
               option(value="business") Business
               option(value="residence") Residence
         div(class="lg:text-14px")(class="mt-[25px]").font-assistant.text-10px.text-white.font-bold.leading-normal
-          label(class="mb-[7px]").bg-gray-70.block.uppercase.rounded-sm(for="square-footage").shadow Square footage of building and size of surrounding property
+          label(class="mb-[7px] h-[20px] lg:h-[30px]").bg-gray-70.block.uppercase.rounded-sm(for="square-footage").shadow Square footage of building and size of surrounding property
           textarea.rounded-sm.bg-gray-50.block.w-full(id="square-footage").shadow
         div.input-security-concerns.textarea-wrapper(class="lg:text-14px")(class="mt-[25px]").font-assistant.text-10px.text-white.font-bold.leading-normal
-          label(class="mb-[7px]").shadow.bg-gray-70.block.uppercase.rounded-sm(for="concerns") What are your security concerns
+          label(class="mb-[7px] h-[20px] lg:h-[30px]").shadow.bg-gray-70.block.uppercase.rounded-sm(for="concerns") What are your security concerns
           textarea.rounded.shadow.bg-gray-50(id="concerns")
         div
           button(class="mt-[25px] p-[10_25] lg:text-14px").uppercase.rounded.shadow-bg.text-white.font-assistant.text-12px.font-bold.leading-normal.bg-blue(onclick="assambleEmail()") Send
