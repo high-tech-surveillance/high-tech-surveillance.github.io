@@ -31,10 +31,10 @@ script(src=require("/app/js/form-processor.js"))
               option(value="residence") Residence
         div(class="lg:text-14px")(class="mt-[25px]").font-assistant.text-10px.text-white.font-bold.leading-normal
           label(class="mb-[7px] py-[0.5em] px-[0.825em]" for="square-footage").bg-gray-70.block.uppercase.rounded-sm.shadow Square footage of building and size of surrounding property
-          textarea.rounded-sm.bg-gray-50.block.w-full(id="square-footage").shadow
+          textarea.rounded-sm.bg-gray-50.block.w-full(id="square-footage" class="h-[150px]").shadow
         div.input-security-concerns.textarea-wrapper(class="lg:text-14px mt-[25px]").font-assistant.text-10px.text-white.font-bold.leading-normal
           label(class="mb-[7px] py-[0.5em] px-[0.825em]" for="concerns").shadow.bg-gray-70.block.uppercase.rounded-sm What are your security concerns
-          textarea.rounded.shadow.bg-gray-50(id="concerns" class="h-[150px] lg:h-[230px]")
+          textarea.rounded.shadow.bg-gray-50(id="concerns" class="h-[170px] lg:h-[230px]")
         div
           button(class="mt-[25px] p-[10_25] lg:text-14px").uppercase.rounded.shadow-bg.text-white.font-assistant.text-12px.font-bold.leading-normal.bg-blue(onclick="assambleEmail()") Send
       div.flex.flex-row(class="mt-[70px]")
