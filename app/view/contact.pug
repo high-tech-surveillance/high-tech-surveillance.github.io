@@ -8,27 +8,27 @@ script(src=require("/app/js/form-processor.js"))
     include fragments/_contact-mediums-menu
     div
       h1(class="lg:text-48px").uppercase.font-sanspro.text-35px.font-black Drop us a #[span.text-red line!]
-      div.row-wrapper
-        div.centered.left-column
-          img(src=require("assets/img/security-camera.png"))
+      img(src=require("assets/img/security-camera.png"))
+      div
+        form(action=`${businessCard['form-submit']}`)
+          div(class="lg:text-14px").font-assistant.font-10px.font-bold.leading-normal.text-white
+            div.input-wrapper
+              label(for="name") Name
+              input(id="input_name", name="name" type="text")
+            div.input-wrapper
+              label(for="email") Email
+              input(name="email" type="text" )
+            div.textarea-wrapper
+              label(for="message") Message
+              textarea(name="message")
+          div(class="lg:text-14px").font-assistant.font-bold-text-12px.leading-normal
+            button(type="submit", onclick="assambleEmail(`New message from: ${document.getElementById('input_name').value}`)") Send
+      div
+        div
           h2(class="lg:text-36px").font-barlow.text-25px.leading-fit.font-semibold.uppercase #[span.text-red Better yet,] see us in person!
           p(class="lg:text-24px").font-assistant.text-18px.leading-normal.font-medium We love our costumers, so feel free to visit us during normal business hours
-        div
-          form(action=`${businessCard['form-submit']}`)
-            div(class="lg:text-14px").font-assistant.font-10px.font-bold.leading-normal.text-white
-              div.input-wrapper
-                label(for="name") Name
-                input(id="input_name", name="name" type="text")
-              div.input-wrapper
-                label(for="email") Email
-                input(name="email" type="text" )
-              div.textarea-wrapper
-                label(for="message") Message
-                textarea(name="message")
-            div(class="lg:text-14px").font-assistant.font-bold-text-12px.leading-normal
-              button(type="submit", onclick="assambleEmail(`New message from: ${document.getElementById('input_name').value}`)") Send
   section.business-location
-    iframe(width="100%", height="300",  style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(businessCard.address.street_line)},${businessCard.address.zip_code},${encodeURIComponent(businessCard.address.city)}`)
+    iframe(width="100%", height="300", style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(businessCard.address.street_line)},${businessCard.address.zip_code},${encodeURIComponent(businessCard.address.city)}`)
     div.address-footer
       div.business-card
         img.logo(src=require("logo") class="w-[100px] lg:w-[150px]" )
