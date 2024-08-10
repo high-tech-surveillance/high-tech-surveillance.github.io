@@ -16,30 +16,30 @@ script(src=require("/app/js/form-processor.js"))
       a(class="lg:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone.replace(/^tel:\/\//, "")}]
       div
         include fragments/_contact-mediums-menu
-    div(class="mx-auto w-[250px] lg:w-auto max-w-[900px] mx-[60px]").mx-auto.hidden(class="group-has-[#show-request-quote-form:checked]:block")
-      h1.text-center(class="lg:text-48px").font-sanspro.text-35px.font-black.uppercase Request a #[span.text-red quotation]
-      form(action=`${business['form-submit']}`)
-        div(class="text-10px lg:text-14px").font-assistant.text-white.font-bold.leading-normal
+    div#quote-form-input(class="mx-auto w-[250px] lg:container lg:w-auto max-w-[900px] mx-[60px] group-has-[#show-request-quote-form:checked]:block").mx-auto.hidden
+      h1.text-center(class="lg:text-48px lg:text-left").font-sanspro.text-35px.font-black.uppercase Request a #[span.text-red quotation]
+      form(action=`${business['form-submit']}` class="lg:grid lg:grid-cols-2")
+        div(class="text-10px lg:text-14px lg:max-w-[380px]").font-assistant.text-white.font-bold.leading-normal
           +labeled_input("Name")
           +labeled_input("Email")
           +labeled_input("Phone")
           +labeled_input("Zip code")
-            div.relative(class="mt-[25px]")
-            label.absolute.uppercase.rounded-sm.w-full.bg-gray-70.pointer-events-none.shadow(for="building-usage" class="after:content-[url(assets/img/arrow-head-down.svg)] after:right-0 after:absolute") Building usage
-            select.shadow.bg-gray-50.rounded-sm.text-black.round-sm.w-full.shadow(id="building-usage", name="buiding-usage")
+          div.relative(class="mt-[25px]")
+            label.absolute.uppercase.rounded-sm.w-full.bg-gray-70.pointer-events-none.shadow(for="building-usage" class="after:content-[url(assets/img/arrow-head-down.svg)] after:right-0 after:absolute px-[0.8em] py-[0.5em] after:pr-[0.8em]") Building usage
+            select.shadow.bg-gray-50.rounded-sm.text-black.round-sm.w-full.shadow(id="building-usage", name="buiding-usage" class="p-[0.5em]")
               option(value="business") Business
               option(value="residence") Residence
-        div(class="lg:text-14px")(class="mt-[25px]").font-assistant.text-10px.text-white.font-bold.leading-normal
+        div(class="lg:text-14px lg:col-start-2  mt-[25px] lg:max-w-[380px] lg:mt-[15px]").font-assistant.text-10px.text-white.font-bold.leading-normal
           label(class="mb-[7px] py-[0.5em] px-[0.825em]" for="square-footage").bg-gray-70.block.uppercase.rounded-sm.shadow Square footage of building and size of surrounding property
           textarea.rounded-sm.bg-gray-50.block.w-full(id="square-footage" class="h-[150px]").shadow
-        div.input-security-concerns.textarea-wrapper(class="lg:text-14px mt-[25px]").font-assistant.text-10px.text-white.font-bold.leading-normal
+        div.input-security-concerns.textarea-wrapper(class="lg:text-14px lg:max-w-[380px] mt-[25px] lg:col-start-2 lg:row-span-2").font-assistant.text-10px.text-white.font-bold.leading-normal
           label(class="mb-[7px] py-[0.5em] px-[0.825em]" for="concerns").shadow.bg-gray-70.block.uppercase.rounded-sm What are your security concerns
           textarea.rounded.shadow.bg-gray-50(id="concerns" class="h-[170px] lg:h-[230px]")
-        div
+        div(class="lg:row-start-2 lg:col-start-1")
           button(class="mt-[25px] p-[10_25] lg:text-14px").uppercase.rounded.shadow-bg.text-white.font-assistant.text-12px.font-bold.leading-normal.bg-blue(onclick="assambleEmail()") Send
-      div.flex.flex-row(class="mt-[70px]")
-        img.logo(src=require("logo") class="w-[80px] lg:w-[111px]")
-        div(class="mx-[20px]")
-          h1(class="lg:text-48px").font-sanspro.font-bold.leading-fit.text-30px HTS
-          address(class="lg:text-18px").font-assistant.text-14px.leading-relaxed #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone.replace("tel://", "")}
+        div.flex.flex-row(class="mt-[70px] lg:col-start-1 lg:row-start-3")
+          img.logo(src=require("logo") class="w-[80px] lg:w-[111px]")
+          div(class="mx-[20px]")
+            h1(class="lg:text-48px").font-sanspro.font-bold.leading-fit.text-30px HTS
+            address(class="lg:text-18px").font-assistant.text-14px.leading-relaxed #{business.address.street_line} #[br] #{business.address.city} #{business.address.state}, #{business.address.zip_code}, #{business.address.country} #[br] #{business['contact-mediums'].telephone.replace("tel://", "")}
 
