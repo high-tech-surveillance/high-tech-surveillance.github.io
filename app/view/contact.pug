@@ -4,29 +4,29 @@ include utils/definitions
 
 script(src=require("/app/js/form-processor.js"))
 +webpage('contact')
-  section
-    include fragments/_contact-mediums-menu
-    div
-      h1(class="lg:text-48px lg:text-left").uppercase.text-center.font-sanspro.text-35px.font-black Drop us a #[span.text-red line!]
-      img(src=require("assets/img/security-camera.png"))
-      div(class="w-[250px] mx-auto")
-        form(action=`${businessCard['form-submit']}`)
-          div(class="lg:text-14px").font-assistant.font-10px.font-bold.leading-normal.text-white
-            +labeled_input("Name")
-            +labeled_input("Email")
-            div
-              label(for="message" class="p-[0.71em] mt-[1em] shadow").rounded-sm.block.uppercase.bg-gray-70.w-fit Message
-              textarea(name="message" class="h-[106px] mt-[15px] shadow").rounded-sm.block.w-full.bg-gray-50
-          div(class="lg:text-14px").font-assistant.font-bold-text-12px.leading-normal
-            button(type="submit" class="rounded my-[1em] p-[1em_2em_1em_2em] uppercase" onclick="assambleEmail(`New message from: ${document.getElementById('input_name').value}`)").bg-blue.font-bold.text-white Send
-      div(class="w-[250px] mx-auto")
-        p(class="lg:text-36px m-[2em_0_1em_0]").font-barlow.text-25px.leading-fit.font-semibold.uppercase #[span.text-red Better yet,] see us in person!
-        p(class="lg:text-24px mb-[2em]").font-assistant.text-18px.leading-normal.font-medium We love our costumers, so feel free to visit us during normal business hours
-  section.business-location
+  section(class="lg:container lg:grid lg:grid-cols-2 lg:w-[960px]").text-center
+    div#social-network.text-right(class="lg:col-span-2")
+      include fragments/_contact-mediums-menu
+    h1(class="lg:text-48px").uppercase.text-center.font-sanspro.text-35px.font-black Drop us a #[span.text-red line!]
+    img(src=require("assets/img/security-camera.png")).mx-auto.col-start-1.row-start-3
+    div(class="w-[250px] lg:w-full lg:col-start-2 lg:row-start-3")
+      form(action=`${businessCard['form-submit']}`)
+        div(class="lg:text-14px").font-assistant.font-10px.font-bold.leading-normal.text-white
+          +labeled_input("Name")
+          +labeled_input("Email")
+          div
+            label(for="message" class="p-[0.71em] mt-[1em] shadow").rounded-sm.block.uppercase.bg-gray-70.w-fit Message
+            textarea(name="message" class="h-[106px] mt-[15px] shadow").rounded-sm.block.w-full.bg-gray-50
+        div(class="lg:text-14px lg:text-right").font-assistant.font-bold-text-12px.leading-normal
+          button(type="submit" class="rounded my-[1em] p-[1em_2em_1em_2em] uppercase" onclick="assambleEmail(`New message from: ${document.getElementById('input_name').value}`)").bg-blue.font-bold.text-white Send
+    div(class="w-[250px] lg:w-full").text-left.col-start-1
+      p(class="lg:text-36px m-[2em_0_1em_0] lg:my-4").font-barlow.text-25px.leading-fit.font-semibold.uppercase #[span.text-red Better yet,] see us in person!
+      p(class="lg:text-24px mb-[2em]").font-assistant.text-18px.leading-normal.font-medium We love our costumers, so feel free to visit us during normal business hours
+  section.business-location(class="lg:container")
     iframe(width="100%", height="300", style="border:0;margin:auto;", loading="lazy", allowfullscreen, referrerpolicy="no-referrer-when-downgrade", src=`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(businessCard.address.street_line)},${businessCard.address.zip_code},${encodeURIComponent(businessCard.address.city)}`)
     div.address-footer
       div.business-card
         img.logo(src=require("logo") class="w-[100px] lg:w-[150px]" )
         div.business-identity
           h1(class="lg:text-48px").font-sanspro.text-35px.leading-fit.font-bold.text-white HTS
-          address(class="lg:text-18px lg:leading-fit").font-assistant.leading-relaxed.text-14px #{businessCard.address.street_line} #[br] #{businessCard.address.city}, #{businessCard.address.zip_code}, #{businessCard.address.country} #[br] #[a(href=`tel:${businessCard['contact-mediums'].telephone}`)= businessCard['contact-mediums'].telephone]
+          address(class="lg:text-18px lg:leading-fit").font-assistant.leading-relaxed.text-14px #{businessCard.address.street_line} #[br] #{businessCard.address.city}, #{businessCard.address.zip_code}, #{businessCard.address.country} #[br] #[a(href=`${businessCard['contact-mediums'].telephone}`)= businessCard['contact-mediums'].telephone.replace("tel://", "")]
