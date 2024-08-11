@@ -18,7 +18,7 @@ script(src=require("/app/js/form-processor.js"))
         include fragments/_contact-mediums-menu
     div#quote-form-input(class="mx-auto w-[250px] lg:container lg:w-auto max-w-[900px] mx-[60px] group-has-[#show-request-quote-form:checked]:block").mx-auto.hidden
       h1.text-center(class="lg:text-48px lg:text-left").font-sanspro.text-35px.font-black.uppercase Request a #[span.text-red quotation]
-      form(action=`${business['form-submit']}` class="lg:grid lg:grid-cols-2")
+      form(target="_blank" action=`${business['form-submit']}` class="lg:grid lg:grid-cols-2")
         div(class="text-10px lg:text-14px lg:max-w-[380px]").font-assistant.text-white.font-bold.leading-normal
           +labeled_input("Name")
           +labeled_input("Email")
@@ -36,7 +36,7 @@ script(src=require("/app/js/form-processor.js"))
           label(class="mb-[7px] py-[0.5em] px-[0.825em]" for="concerns").shadow.bg-gray-70.block.uppercase.rounded-sm What are your security concerns
           textarea.rounded.shadow.bg-gray-50(id="concerns" class="h-[170px] lg:h-[230px]")
         div(class="lg:row-start-2 lg:col-start-1")
-          button(class="mt-[25px] p-[10_25] lg:text-14px").uppercase.rounded.shadow-bg.text-white.font-assistant.text-12px.font-bold.leading-normal.bg-blue(onclick="assambleEmail()") Send
+          button(class="mt-[25px] p-[10_25] lg:text-14px").uppercase.rounded.shadow-bg.text-white.font-assistant.text-12px.font-bold.leading-normal.bg-blue(onclick="processEmail()") Send
         div.flex.flex-row(class="mt-[70px] lg:col-start-1 lg:row-start-3")
           img.logo(src=require("logo") class="w-[80px] lg:w-[111px]")
           div(class="mx-[20px]")

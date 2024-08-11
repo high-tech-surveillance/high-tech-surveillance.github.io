@@ -16,7 +16,19 @@ function formToText(form) {
   return text;
 }
 
-function assambleEmail(subject = document.getElementById("subject")) {
+function processEmail() {
+  sendEmail();
+  hiddeForm();
+}
+
+function hiddeForm() {
+  let showRequestQuoteFormCheckbox = document.getElementById(
+    "show-request-quote-form"
+  );
+  showRequestQuoteFormCheckbox.checked = false;
+}
+
+function sendEmail(subject = document.getElementById("subject")) {
   let subjectElement;
   let body;
 
@@ -44,4 +56,4 @@ function assambleEmail(subject = document.getElementById("subject")) {
 }
 
 window.showQuotationForm = showQuotationForm;
-window.assambleEmail = assambleEmail;
+window.processEmail = processEmail;
