@@ -1,3 +1,10 @@
+<style>
+    .document-wrapper ul{
+        list-style: disc;
+        padding-left:3em;
+    }
+</style>
+
 # Terms of use
 
 ## Acceptance of Terms

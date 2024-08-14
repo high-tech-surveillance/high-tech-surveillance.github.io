@@ -1,3 +1,10 @@
+<style>
+    .document-wrapper ul{
+        list-style: disc;
+        padding-left:3em;
+    }
+</style>
+
 # Privacy policy
 
 ## Information We Collect
@@ -33,7 +40,7 @@ California residents have the right to:
 
 ## Contact Us
 
-If you have any questions about our privacy policy or wish to exercise your rights, please contact us at [Your Contact Information].
+If you have any questions about our privacy policy or wish to exercise your rights, please contact us at <a href="mailto:contact@securityhts.com">contact@securityhts.com</a>
 
 ## Changes to this Policy
 
