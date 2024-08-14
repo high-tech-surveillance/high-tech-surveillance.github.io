@@ -11,7 +11,17 @@
 
 We collect personal information that you voluntarily provide to us through contact forms or email communications. This may include your name, email address, and any other information you choose to provide.
 
-We also automatically collect certain information about your visit to our website, such as your IP address, browser type, and pages viewed. We may use cookies or similar technologies to collect this information.
+We also automatically collect certain information about your visit to our website, such as your IP address, browser type, and pages viewed.
+
+## GitHub's Data Practices
+
+Our website is hosted on GitHub Pages. GitHub may collect certain information about visitors, such as IP addresses and browser types. For more details on their data practices, please refer to GitHub's Privacy Statement:
+
+https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement.
+
+## Data Transfers
+
+Personal data collected through this website may be transferred to and processed in jurisdictions outside of California, including the United States, where GitHub's servers are located. These jurisdictions may have different data protection laws than California.
 
 ## How We Use Your Information
 
@@ -21,7 +31,8 @@ We use your personal information to:
 - Provide you with information about our products and services
 - Improve our website and marketing efforts
 - Comply with applicable laws and regulations
-- We do not sell your personal information.
+
+We do not sell your personal information.
 
 ## Sharing Your Information
 
