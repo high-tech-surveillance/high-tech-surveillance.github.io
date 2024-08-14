@@ -7,6 +7,8 @@
 
 # Terms of use
 
+This website is owned by High Tech Surveillance and operated on our behalf by <a href="https://www.linkedin.com/in/emir-herrera-235b2424/">Emir Herrera González</a>. It provides information about our company’s products and services.
+
 ## Acceptance of Terms
 
 By accessing or using this website, you agree to be bound by these Terms of Use. If you do not agree to these terms, you may not use the website.
