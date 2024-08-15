@@ -11,15 +11,6 @@ const sourcePath = path.join(__dirname, "app/view/"); // => /path/to/src
 
 const config = {
   target: "web",
-  entry: {
-    index: "./app/view/index.pug",
-    "about-us": "./app/view/about-us.pug",
-    gallery: "./app/view/gallery.pug",
-    contact: "./app/view/contact.pug",
-    quote: "./app/view/quote.pug",
-    "privacy-policy": "./app/view/privacy-policy.pug",
-    "terms-of-use": "./app/view/terms-of-use.pug",
-  },
   output: {
     path: path.resolve(__dirname, OUTPUT_DIR),
     filename: "[name].[contenthash:8][ext]",
@@ -30,6 +21,8 @@ const config = {
       font: path.resolve(__dirname, "app/assets/fonts"),
       logo: path.resolve(__dirname, "app/assets/img/logo.svg"),
       style: path.resolve(__dirname, "app/style/"),
+      utils: path.resolve(__dirname, "app/view/utils/"),
+      fragments: path.resolve(__dirname, "app/view/fragments/"),
       /*"showcase-carousel": path.resolve(
         __dirname,
         "components/showcase-carousel/dist/"
@@ -60,6 +53,7 @@ const config = {
       patterns: ["CNAME"],
     }),
     new PugPlugin({
+      entry: "app/view/pages/",
       verbose: true,
       pretty: true,
       js: {
