@@ -27,6 +27,10 @@ const config = {
         __dirname,
         "components/showcase-carousel/dist/"
       ),  */
+      markdown: path.resolve(
+        __dirname,
+        "app/style/high-tech-surveillance/markdown.sass"
+      ),
       theme: path.resolve(
         __dirname,
         "app/style/high-tech-surveillance/style.sass"

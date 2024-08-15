@@ -1,10 +1,3 @@
-<style>
-    .document-wrapper ul{
-        list-style: disc;
-        padding-left:3em;
-    }
-</style>
-
 # Terms of use
 
 This website is owned by High Tech Surveillance and operated on our behalf by <a href="https://emirhg.github.io/">Emir Herrera González</a>. It provides information about our company’s products and services.
