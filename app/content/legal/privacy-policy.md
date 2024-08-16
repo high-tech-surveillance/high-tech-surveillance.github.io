@@ -10,7 +10,7 @@ We also automatically collect certain information about your visit to our websit
 
 Our website is hosted on GitHub Pages. GitHub may collect certain information about visitors, such as IP addresses and browser types. For more details on their data practices, please refer to GitHub's Privacy Statement:
 
-https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement.
+<https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement>
 
 ## Data Transfers
 
