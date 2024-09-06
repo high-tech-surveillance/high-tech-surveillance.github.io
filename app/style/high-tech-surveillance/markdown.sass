@@ -1,3 +1,12 @@
-.document-wrapper ul
-    list-style: disc
-    padding-left:3em
+@tailwind components
+@layer components
+  .document-wrapper ul
+      list-style: disc
+      padding-left:3em
+  h1
+    @apply uppercase text-36px font-bold 
+  h2
+    @apply uppercase text-24px
+  h1, h2, p
+    @apply mt-4
+
