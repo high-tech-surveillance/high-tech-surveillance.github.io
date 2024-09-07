@@ -1,10 +1,4 @@
 @use "globals" as *
-@use "page-about-us"
-@use "page-quote"
-@use "page-contact"
-@use "gallery"
-@use "media-mobile"
-//@use "font-styles"
 @use "font-face"
 
 @tailwind base
@@ -14,7 +8,7 @@
 @layer base
   html
     font-size: 16px
-
+    @apply leading-none
 img
   max-width: 100%
 .centered
