@@ -14,6 +14,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, OUTPUT_DIR),
     filename: "[name].[contenthash:8][ext]",
+    assetModuleFilename: "assets/[hash][ext][query]",
   },
   resolve: {
     alias: {
@@ -58,13 +59,13 @@ const config = {
     }),
     new PugPlugin({
       entry: "app/view/pages/",
-      verbose: true,
-      pretty: true,
+      //verbose: true,
+      //pretty: true,
       js: {
-        filename: "[name].[contenthash:8].js",
+        filename: "js/[name].[contenthash:8].js",
       },
       css: {
-        filename: "[name].[contenthash:8].css",
+        filename: "css/[name].[contenthash:8].css",
       },
     }),
 
@@ -98,8 +99,29 @@ const config = {
         ],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|mp4)$/i,
-        type: "asset",
+        test: /\.(mp4)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "video/[hash][ext][query]",
+        },
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[hash][ext][query]",
+        },
+      },
+      {
+        test: /\.(eot|otf|ttf|woff|woff2)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[hash][ext][query]",
+        },
+      },
+      {
+        test: /\.(svg)$/i,
+        type: "asset/inline",
       },
 
       // Add your rules for custom modules here
