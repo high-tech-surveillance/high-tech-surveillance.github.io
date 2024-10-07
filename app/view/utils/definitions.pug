@@ -1,6 +1,6 @@
 mixin labeled_input(field, colour)
   div.shadow.bg-gray-50.flex.rounded-sm(class="mt-[15px] lg:even:mb-[20px]")
-    label(class="min-w-[53px] lg:w-[80px] lg:text-14px py-[0.5em] px-[0.825em]" for=field.toLowerCase()).rounded-sm.uppercase.round-r-sm.bg-gray-70= field
+    label(class="min-w-[53px] lg:w-[80px] lg:text-14px py-[0.5em] px-[0.825em]" for=field.toLowerCase().replace(" ", "-")).rounded-sm.uppercase.round-r-sm.bg-gray-70= field
     input.width-full.bg-gray-50.grow.rounded-r-sm(class="lg:h-[30px] h-[20px]" id=field.toLowerCase().replace(" ", "-"), name=field.toLowerCase() )
 mixin video-wrapper(title, description)
   div.video-wrapper(class="even:bg-red")
