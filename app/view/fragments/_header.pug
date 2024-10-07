@@ -13,7 +13,7 @@ header
         input#nav-checkbox(type="checkbox").hidden
         label(for="nav-checkbox")
           img(src=require("assets/img/bars.svg") class="w-[18px] h-[14px]")
-      nav(class="hidden lg:block bg-white/80 group-has-[input:checked]:flex group-has-[input:checked]:flex-col").absolute.right-0.z-10
+      nav(class="hidden lg:block bg-white/80 group-has-[input:checked]:flex group-has-[input:checked]:flex-col lg:relative lg:right-none" ).absolute.right-0.z-10
         each menuitem of ([['Home', "/"],['About us', '/about-us.html'], ['Gallery', '/gallery.html'], ['Quote', '/quote.html'], ['Contact us', '/contact.html'] ])
           menuitem
             +menu-entry(menuitem[0], menuitem[1])
