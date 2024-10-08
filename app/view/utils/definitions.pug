@@ -22,7 +22,9 @@ mixin webpage(pagename)
     if !isProduction
       script(src=require("/app/js/hmr.js"))
 
+- const business = require("/app/business-card.json");
 mixin hidden-quotation()
-  div(class="group-has-[#show-request-quote-form:checked]:hidden lg:grid lg:grid-cols-2").text-center
-    block
-  include fragments/_quotation-form
+  div.group
+    div(class="group-has-[#show-request-quote-form:checked]:hidden")
+      block
+    include fragments/_quotation-form

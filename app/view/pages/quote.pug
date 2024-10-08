@@ -1,8 +1,8 @@
-- const business = require("/app/business-card.json");
+//-- const business = require("/app/business-card.json");
 
 include utils/definitions
 script(src=require("/app/js/form-processor.js"))
 +webpage('quote')
-  section.mx-auto.container.group(class="py-[40px] lg:w-auto")
+  section.mx-auto.container(class="py-[40px] lg:w-auto")
     +hidden-quotation()
       include fragments/_quotation-invite
