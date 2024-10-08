@@ -28,7 +28,8 @@ mixin hidden-quotation()
   div.group
     div(class="group-has-[#show-request-quote-form:checked]:hidden")
       block
-    include fragments/_quotation-form
+    div
+      include fragments/_quotation-form
 
 
 mixin request-quotation()
