@@ -1,3 +1,5 @@
+- const business = require("/app/business-card.json");
+
 mixin labeled_input(field, colour)
   div.shadow.bg-gray-50.flex.rounded-sm(class="mt-[15px] lg:even:mb-[20px]")
     label(class="min-w-[53px] lg:w-[80px] lg:text-14px py-[0.5em] px-[0.825em]" for=field.toLowerCase().replace(" ", "-")).rounded-sm.uppercase.round-r-sm.bg-gray-70= field
@@ -22,9 +24,17 @@ mixin webpage(pagename)
     if !isProduction
       script(src=require("/app/js/hmr.js"))
 
-- const business = require("/app/business-card.json");
 mixin hidden-quotation()
   div.group
     div(class="group-has-[#show-request-quote-form:checked]:hidden")
       block
     include fragments/_quotation-form
+
+
+mixin request-quotation()
+  div(class="text-center self-center")
+    input#show-request-quote-form(type="checkbox").hidden
+    if !block
+      label(for="show-request-quote-form" class="lg:text-24px hover:cursor-pointer hover:shadow-sm max-w-[230px] mt-[60px]  p-[15_5_15_5]").rounded.inline-block.text-white.bg-red.text-18px.font-bold.leading-normal.shadow-bg.uppercase Request a quotation
+    else
+      block

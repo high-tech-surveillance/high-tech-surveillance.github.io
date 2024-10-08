@@ -4,9 +4,8 @@ div(class="lg:grid lg:grid-cols-2").text-center
     p(class="lg:text-24px lg:max-w-[384px]").mx-auto.font-barlow.font-semibold.leading-fit.text-18px.text-justify Tell us more about your security concerns so we can get started on a plan to address them
     p(class="lg:text-18px lg:max-w-[330px]").mx-auto.font-assistant.text-16px.font-medium.leading-normal Your time is valuable and we will make sure to get back to you as soon as posible
   img(src=require("assets/img/building-and-camera.png") class="lg:col-start-1 lg:row-start-1 lg:row-span-2")
-  div(class="lg:col-start-2 text-center self-center")
-    input#show-request-quote-form(type="checkbox").hidden
-    label(for="show-request-quote-form")(class="lg:text-24px hover:cursor-pointer hover:shadow-sm max-w-[230px] mt-[60px]  p-[15_5_15_5]").rounded.inline-block.text-white.bg-red.text-18px.font-bold.leading-normal.shadow-bg.uppercase Request a quotation
+  div(class="lg:col-start-2")
+    +request-quotation()
   a(class="lg:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone.replace(/^tel:\/\//, "")}]
   div
     include fragments/_contact-mediums-menu
