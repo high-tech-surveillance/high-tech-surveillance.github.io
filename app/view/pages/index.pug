@@ -3,9 +3,9 @@ script(src=require("/app/js/form-processor.js"))
 +webpage('index')
   div.grow.container.content-center.mx-auto(class="lg:w-auto")
     +hidden-quotation()
-      section.mx-auto.items-center.relative(class="lg:grid lg:gap-[45px] lg:grid-cols-2")
-        div(class="")
-          img(class="max-h-[500px] lg:opacity-100 lg:h-full" src=require("assets/img/by-peter-pivak-from-unsplash.jpg") alt="Surveillance cameras on building corner.").w-full.h-auto.object-cover.opacity-45.block
+      section.mx-auto.items-center.relative(class="lg:grid lg:gap-[95px] lg:grid-cols-2 h-[100%] lg:w-[1160px]")
+        div(class="bg-[url('assets/img/by-peter-pivak-from-unsplash.jpg')]").h-full.bg-center
+          //-img(class="lg:opacity-100 lg:h-full" src=require("assets/img/by-peter-pivak-from-unsplash.jpg") alt="Surveillance cameras on building corner.").w-full.h-auto.object-cover.opacity-45.block
         div(class="lg:relative").absolute.text-center.inset-0.content-center.max-w-fit.mx-auto
           h2.leading-none(class="lg:text-85px").font-sanspro.text-60px.uppercase.drop-shadow-md Your #[span.text-red.light eyes] #[br] and #[span.text-blue ears]
           p(class="lg:text-26px").font-sanspro.text-20px.uppercase.font-bold while you are away
