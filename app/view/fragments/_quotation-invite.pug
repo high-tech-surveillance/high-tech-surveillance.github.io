@@ -1,11 +1,11 @@
-div(class="lg:grid lg:grid-cols-2").text-center
-  div(class="lg:col-start-2 self-center w-[300px] lg:w-auto mx-auto")
-    h1(class="lg:text-40px").font-sanspro.font-black.text-red.text-25px.uppercase Each location has it's#[br]#[span.text-blue own security needs]
-    p(class="lg:text-24px lg:max-w-[384px]").mx-auto.font-barlow.font-semibold.leading-fit.text-18px.text-justify Tell us more about your security concerns so we can get started on a plan to address them
-    p(class="lg:text-18px lg:max-w-[330px]").mx-auto.font-assistant.text-16px.font-medium.leading-normal Your time is valuable and we will make sure to get back to you as soon as posible
-  img(src=require("assets/img/building-and-camera.png") class="lg:col-start-1 lg:row-start-1 lg:row-span-2")
-  div(class="lg:col-start-2")
+div(class="xl:grid xl:grid-cols-2").text-center
+  div(class="xl:col-start-2 self-center w-[300px] xl:w-auto mx-auto")
+    h1(class="xl:text-40px").font-sanspro.font-black.text-red.text-25px.uppercase Each location has it's#[br]#[span.text-blue own security needs]
+    p(class="xl:text-24px xl:max-w-[384px]").mx-auto.font-barlow.font-semibold.leading-fit.text-18px.text-justify Tell us more about your security concerns so we can get started on a plan to address them
+    p(class="xl:text-18px xl:max-w-[330px]").mx-auto.font-assistant.text-16px.font-medium.leading-normal Your time is valuable and we will make sure to get back to you as soon as posible
+  img(src=require("assets/img/building-and-camera.png") class="xl:col-start-1 xl:row-start-1 xl:row-span-2")
+  div(class="xl:col-start-2")
     +request-quotation()
-  a(class="lg:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone.replace(/^tel:\/\//, "")}]
+  a(class="xl:text-36px").font-barlow.text-25px.font-semibold.leading-fit.contact-phone(href=`${business['contact-mediums'].telephone}`) #[h2 HTS #{business['contact-mediums'].telephone.replace(/^tel:\/\//, "")}]
   div
     include fragments/_contact-mediums-menu
