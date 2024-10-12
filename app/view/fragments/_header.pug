@@ -4,17 +4,17 @@ mixin menu-entry(title, link)
   a.font-assistant.text-14px.font-medium.text-black.no-underline.uppercase(href=`${link}` class="lg:text-18px mx-[25px]")= title
 
 header
-  div.container.flex.flex-row.items-center.justify-between
+  div.container.flex.flex-row.items-center.justify-between(class="px-[20px]")
     span.business-presentation.flex.flex-row.items-center
-      img.logo(src=require("logo") class="lg:w-60px my-[12px] mx-[24px]").w-40px
-      h4.font-sanspro.font-bold.text-16px.uppercase(class="lg:text-24px")= business.name
-    menu(class="group")
+      img.logo(src=require("logo") class="lg:w-60px lg:h-[57.16px] m-[10px]").w-40px
+      h4.font-sanspro.font-bold.text-16px.uppercase(class="lg:text-24px mx-[14px] mt-[2px]")= business.name
+    menu(class="group mt-[2px]")
       menuitem(class="lg:hidden")
         input#nav-checkbox(type="checkbox").hidden
         label(for="nav-checkbox")
           img(src=require("assets/img/bars.svg") class="w-[18px] h-[14px]")
-      nav(class="hidden lg:block bg-white/80 group-has-[input:checked]:flex group-has-[input:checked]:flex-col lg:relative lg:right-none" ).absolute.right-0.z-10
+      nav(class="hidden mx-[30px] lg:block bg-white/80 group-has-[input:checked]:flex group-has-[input:checked]:flex-col lg:relative lg:right-none" ).absolute.right-0.z-10
         each menuitem of ([['Home', "/"],['About us', '/about-us.html'], ['Gallery', '/gallery.html'], ['Quote', '/quote.html'], ['Contact us', '/contact.html'] ])
           menuitem
             +menu-entry(menuitem[0], menuitem[1])
-  hr
+  hr(class="mt-[3px]")
